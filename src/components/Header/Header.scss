@@ -1,8 +1,12 @@
+@import '../../styles/abstracts/variables';
+
 .header {
   padding: 12px 0;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 10px;
+
+  font: bold 18px/140% 'Nunito';
 }
