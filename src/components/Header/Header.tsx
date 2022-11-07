@@ -1,9 +1,12 @@
 import Logo from './Logo/Logo';
+import Menu from './Menu/Menu';
+import './Header.scss';
 
 const Header = () => (
-  <div>
+  <header className="header">
     <Logo />
-  </div>
+    <Menu />
+  </header>
 );
 
 export default Header;
