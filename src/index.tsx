@@ -8,12 +8,12 @@ import Header from './components/Header/Header';
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <BrowserRouter>
-    <div className='wrapper'>
-      <div className='container'>
+    <div className="wrapper">
+      <div className="container">
         <Header />
         <Routes>
-          <Route path='/' element={<Main />} />
-          <Route path='about' element={<About />} />
+          <Route path="/" element={<Main />} />
+          <Route path="about" element={<About />} />
         </Routes>
       </div>
     </div>
