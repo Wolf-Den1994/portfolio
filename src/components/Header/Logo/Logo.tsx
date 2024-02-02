@@ -1,5 +1,5 @@
 import Icon from '../../UI/Icon/Icon';
-import { iconLogo } from '../../../utils/constants';
+import { iconLogo } from '../../../utils/icons';
 import './Logo.scss';
 
 const Logo = () => (

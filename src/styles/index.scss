@@ -26,6 +26,8 @@ body {
   font-family: $font-family-primary;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: #f9faff;
 }
 
 code {
@@ -36,9 +38,11 @@ code {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+
+  position: relative;
 }
 
-.container {
+.content {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;

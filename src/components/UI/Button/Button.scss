@@ -1,0 +1,43 @@
+.button {
+  padding: 8px;
+
+  height: 44px;
+  width: 100%;
+
+  border-radius: 8px;
+
+  font: 500 18px/150% 'Roboto';
+  color: #25282b;
+  transition: 0.2s;
+  cursor: pointer;
+
+  &.default {
+    background-color: transparent;
+    border: 2px solid #25282b;
+
+    &:hover {
+      background-color: darken(#fff, 10%);
+      border: 2px solid darken(#25282b, 10%);
+    }
+  }
+
+  &.primary {
+    background-color: #fdc435;
+    border: 2px solid #fdc435;
+
+    &:hover {
+      background-color: darken(#fdc435, 10%);
+      border: 2px solid darken(#fdc435, 10%);
+    }
+  }
+
+  &.link {
+    background-color: transparent;
+    border: 1px solid #25282b;
+
+    &:hover {
+      background-color: darken(#fff, 10%);
+      border: 1px solid darken(#25282b, 10%);
+    }
+  }
+}
