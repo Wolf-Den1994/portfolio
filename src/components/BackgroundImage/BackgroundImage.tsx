@@ -2,8 +2,8 @@ import './BackgroundImage.scss';
 
 type BackgroundImageProps = {
   srcImage: string;
-  width?: number;
-  height?: number;
+  width?: number | string;
+  height?: number | string;
   additionalStyles?: Record<string, unknown>;
 };
 
