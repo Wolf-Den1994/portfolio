@@ -5,7 +5,7 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import projectsData from '../../data/projects';
+import projectsData from '../../../data/projects';
 import Project from '../Project/Project';
 import './SwiperProjects.scss';
 

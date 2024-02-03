@@ -1,4 +1,4 @@
-import SwiperProjects from '../SwiperProjects/SwiperProjects';
+import SwiperProjects from './SwiperProjects/SwiperProjects';
 import './Projects.scss';
 
 const Projects = () => (

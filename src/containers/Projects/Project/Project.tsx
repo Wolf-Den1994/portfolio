@@ -1,4 +1,4 @@
-import Button from '../../components/UI/Button/Button';
+import Button from '../../../components/UI/Button/Button';
 import './Project.scss';
 
 type ProjectProps = {
