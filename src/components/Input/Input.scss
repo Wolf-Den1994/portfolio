@@ -1,0 +1,33 @@
+.input-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font: 600 22px/150% 'Nunito';
+  color: #25282b;
+}
+
+.textarea,
+.input {
+  display: flex;
+  align-items: center;
+
+  background: #ffffff;
+  border: 1px solid #e8ecf4;
+  border-radius: 8px;
+
+  font: 400 16px/150% 'Nunito';
+  color: #424449;
+}
+
+.textarea {
+  height: 160px;
+  padding: 7px 10px;
+  resize: none;
+}
+
+.input {
+  padding: 7px 10px;
+}

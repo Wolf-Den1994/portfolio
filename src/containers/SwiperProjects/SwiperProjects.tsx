@@ -5,7 +5,7 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import projectsData from '../../utils/projects-data';
+import projectsData from '../../data/projects';
 import Project from '../Project/Project';
 import './SwiperProjects.scss';
 
@@ -50,7 +50,7 @@ const SwiperProjects = () => {
         onSwiper={setSwiperRef}
       >
         {theSlides.map(({ photoAlign, title, description, linkUrl, srcImage }) => (
-          <SwiperSlide>
+          <SwiperSlide key={title}>
             <Project
               photoAlign={photoAlign}
               title={title}

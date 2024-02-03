@@ -12,6 +12,18 @@
 
 @font-face {
   font-family: 'Nunito';
+  src: url('../../assets/fonts/Nunito/Nunito-SemiBold.eot');
+  src: local('Nunito SemiBold'), url('../../assets/fonts/Nunito/Nunito-SemiBold.woff2') format('woff2'),
+    url('../../assets/fonts/Nunito/Nunito-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/Nunito/Nunito-SemiBold.woff') format('woff'),
+    url('../../assets/fonts/Nunito/Nunito-SemiBold.ttf') format('truetype'),
+    url('../../assets/fonts/Nunito/Nunito-SemiBold.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nunito';
   src: url('../../assets/fonts/Nunito/Nunito-Bold.eot');
   src: local('Nunito Bold'), url('../../assets/fonts/Nunito/Nunito-Bold.woff2') format('woff2'),
     url('../../assets/fonts/Nunito/Nunito-Bold.eot?#iefix') format('embedded-opentype'),
