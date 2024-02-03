@@ -1,0 +1,27 @@
+:root {
+  --swiper-theme-color: #fdc435;
+}
+
+.swiper {
+  border-radius: 24px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  display: flex;
+  text-rendering: auto;
+  top: 55%;
+}
+
+.swiper-button-prev-custom {
+  left: -10%;
+}
+
+.swiper-button-next-custom {
+  right: -10%;
+}

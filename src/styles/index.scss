@@ -1,0 +1,59 @@
+@import './abstracts/variables';
+@import './base/reset';
+@import './base/typography';
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $high;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: $medium;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $medium;
+}
+
+body {
+  margin: 0;
+  color: $high;
+  font-family: $font-family-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: #f9faff;
+}
+
+code {
+  font-family: $font-family-code;
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+  color: $high;
+
+  &:focus {
+    outline: none;
+  }
+}
