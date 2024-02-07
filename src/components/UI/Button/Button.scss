@@ -8,6 +8,7 @@
 
   font: 500 18px/150% 'Roboto';
   color: #25282b;
+
   transition: 0.2s;
   cursor: pointer;
 
@@ -38,6 +39,31 @@
     &:hover {
       background-color: darken(#fff, 10%);
       border: 1px solid darken(#25282b, 10%);
+    }
+  }
+
+  &.icon-link {
+    padding: 0;
+
+    width: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    border: 0;
+
+    transition: 0.5s;
+    color: #25282b;
+
+    &:hover {
+      transform: rotate(360deg);
+
+      background-color: transparent;
+      border: 0;
+
+      color: darken(#25282b, 10%);
     }
   }
 }

@@ -1,7 +1,8 @@
+import { ReactNode } from 'react';
 import './Button.scss';
 
 type ButtonProps = {
-  children: string;
+  children: string | ReactNode;
   type?: 'button' | 'submit' | 'reset';
   kind?: 'default' | 'primary' | 'link';
   styles?: Record<string, unknown>;
