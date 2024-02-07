@@ -1,28 +1,12 @@
-import { ChangeEvent, useState } from 'react';
 import './Input.scss';
+import { InputProps, typeTextarea } from './types';
 
-const typeTextarea = 'textarea';
-type InputType = 'text' | 'email' | typeof typeTextarea | 'hidden';
-type InputProps = {
-  type: InputType;
-  name?: string;
-  id?: string;
-  labelText?: string;
-  value?: string | number | readonly string[];
-};
-
-const Input = ({ type, name, id, labelText, value }: InputProps) => {
-  const [inputValue, setInputValue] = useState(value);
-
-  const handleInputValue = (e: ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
-  };
-
-  const inputElement =
+const Input = ({ type, name, id, labelText, onChange }: InputProps) => {
+  const InputElement =
     type === typeTextarea ? (
-      <textarea className="textarea" name={name} id={id} />
+      <textarea className="textarea" name={name} id={id} onChange={onChange} />
     ) : (
-      <input className="input" type={type} name={name} id={id} value={inputValue} onChange={handleInputValue} />
+      <input className="input" type={type} name={name} id={id} onChange={onChange} />
     );
 
   return (
@@ -32,7 +16,7 @@ const Input = ({ type, name, id, labelText, value }: InputProps) => {
           {labelText}
         </label>
       )}
-      {inputElement}
+      {InputElement}
     </div>
   );
 };
@@ -41,7 +25,6 @@ Input.defaultProps = {
   name: '',
   id: '',
   labelText: '',
-  value: '',
 };
 
 export default Input;

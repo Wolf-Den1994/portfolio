@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useState } from 'react';
-import { Swiper as SwiperClass } from 'swiper/types';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper as SwiperClass } from 'swiper/types';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
