@@ -1,18 +1,22 @@
-import { ChangeEvent } from 'react';
+// import { ChangeEvent } from 'react';
+import { FieldErrors, UseFormRegister } from 'react-hook-form';
+import { FormState } from '../../../Form/types';
 
-export const typeTextarea = 'textarea';
+export const TEXTAREA_TYPE = 'textarea';
+export type InputType = 'text' | 'email' | 'message';
 
 export type InputProps = {
-  name?: string;
   id?: string;
+  name: 'name' | 'email' | 'message';
   labelText?: string;
+  register: UseFormRegister<FormState>;
+  required?: boolean;
+  errors: FieldErrors<FormState>;
 } & (
   | {
-      type: 'text' | 'email' | 'hidden';
-      onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+      type: InputType;
     }
   | {
-      type: typeof typeTextarea;
-      onChange: (e: ChangeEvent<HTMLTextAreaElement>) => void;
+      type: typeof TEXTAREA_TYPE;
     }
 );

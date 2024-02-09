@@ -1,12 +1,12 @@
 import './Input.scss';
-import { InputProps, typeTextarea } from './types';
+import { InputProps, TEXTAREA_TYPE } from './types';
 
-const Input = ({ type, name, id, labelText, onChange }: InputProps) => {
+const Input = ({ type, id, name, labelText, register, required, errors }: InputProps) => {
   const InputElement =
-    type === typeTextarea ? (
-      <textarea className="textarea" name={name} id={id} onChange={onChange} />
+    type === TEXTAREA_TYPE ? (
+      <textarea className="textarea" id={id} {...register(name, { required })} />
     ) : (
-      <input className="input" type={type} name={name} id={id} onChange={onChange} />
+      <input className="input" type={type} id={id} {...register(name, { required })} />
     );
 
   return (
@@ -17,12 +17,12 @@ const Input = ({ type, name, id, labelText, onChange }: InputProps) => {
         </label>
       )}
       {InputElement}
+      <strong className={`input-error ${errors[name] && 'show'}`}>{labelText} is required!</strong>
     </div>
   );
 };
 
 Input.defaultProps = {
-  name: '',
   id: '',
   labelText: '',
 };

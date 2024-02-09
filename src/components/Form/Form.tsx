@@ -1,35 +1,29 @@
-import { FormEvent, useState, ChangeEvent } from 'react';
+import { useForm } from 'react-hook-form';
 import Button from '../UI/Button/Button';
 import Input from '../UI/Input/Input';
 import './Form.scss';
 import { FormProps, FormState } from './types';
 
 const Form = ({ onSubmit }: FormProps) => {
-  const [state, setState] = useState<FormState>({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.warn('onSubmit!');
-
-    onSubmit(state);
-  };
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) => {
-    setState({
-      ...state,
-      [e.currentTarget.id]: e.currentTarget.value,
-    });
-  };
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormState>();
 
   return (
-    <form className="form" name="contact" method="POST" onSubmit={handleSubmit} data-netlify="true">
-      <Input type="text" name="name" id="name" labelText="Name" onChange={handleChange} />
-      <Input type="email" name="email" id="email" labelText="Email" onChange={handleChange} />
-      <Input type="textarea" name="message" id="message" labelText="Message" onChange={handleChange} />
+    <form className="form" name="contact" method="POST" onSubmit={handleSubmit(onSubmit)} data-netlify="true">
+      <Input type="text" id="name" name="name" labelText="Name" register={register} required errors={errors} />
+      <Input type="email" id="email" name="email" labelText="Email" register={register} required errors={errors} />
+      <Input
+        type="textarea"
+        id="message"
+        name="message"
+        labelText="Message"
+        register={register}
+        required
+        errors={errors}
+      />
       <Button type="submit" kind="primary" styles={{ maxWidth: 90, alignSelf: 'flex-end' }}>
         Send
       </Button>
