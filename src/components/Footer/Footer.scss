@@ -1,7 +1,31 @@
 .footer {
   position: relative;
+}
 
+.footer-copy {
   text-align: center;
   font: 400 16px/150% 'Nunito';
   color: #828282;
+}
+
+.footer-space {
+  height: 350px;
+}
+
+.footer-lava-lamp {
+  overflow: hidden;
+  height: 550px;
+
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+
+  @media screen and (max-width: 1920px) {
+    height: 444px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    height: 350px;
+  }
 }
