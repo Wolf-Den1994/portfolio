@@ -1,0 +1,38 @@
+.success-modal {
+  max-width: 280px;
+  width: 100%;
+
+  position: relative;
+  padding: 46px 12px 12px 12px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+
+  text-align: center;
+  font: 400 18px/150% 'Nunito';
+  color: #25282b;
+
+  .icon-link {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    transition: 0.2s;
+    transform: scale(1);
+
+    color: #25282b;
+
+    &:hover {
+      color: darken(#25282b, 10%);
+    }
+  }
+
+  .icon-link,
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}

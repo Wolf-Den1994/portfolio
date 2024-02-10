@@ -8,9 +8,16 @@ type ButtonProps = {
   styles?: Record<string, unknown>;
   linkUrl?: string;
   className?: string;
+  onClick?: () => void;
 };
 
-const Button = ({ type, children, kind, styles, linkUrl, className }: ButtonProps) => {
+const Button = ({ type, children, kind, styles, linkUrl, className, onClick }: ButtonProps) => {
+  const handleClick = () => {
+    if (onClick) {
+      onClick();
+    }
+  };
+
   if (kind === 'link') {
     return (
       <a
@@ -19,6 +26,7 @@ const Button = ({ type, children, kind, styles, linkUrl, className }: ButtonProp
         rel="noreferrer"
         className={`button ${kind} ${className}`}
         style={{ ...styles }}
+        onClick={handleClick}
       >
         {children}
       </a>
@@ -26,7 +34,7 @@ const Button = ({ type, children, kind, styles, linkUrl, className }: ButtonProp
   }
 
   return (
-    <button type={type} className={`button ${kind} ${className}`} style={{ ...styles }}>
+    <button type={type} className={`button ${kind} ${className}`} style={{ ...styles }} onClick={handleClick}>
       {children}
     </button>
   );
@@ -40,6 +48,7 @@ Button.defaultProps = {
   },
   linkUrl: '',
   className: '',
+  onClick: () => undefined,
 };
 
 export default Button;

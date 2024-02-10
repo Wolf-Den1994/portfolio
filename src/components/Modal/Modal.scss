@@ -1,0 +1,25 @@
+.cover {
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+
+  background-color: #0000007a;
+}
+
+.modal {
+  padding: 20px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 12;
+
+  background-color: #fff;
+
+  border-radius: 12px;
+}

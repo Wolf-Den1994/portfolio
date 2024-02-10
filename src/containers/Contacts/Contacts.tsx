@@ -1,10 +1,18 @@
+import { createPortal } from 'react-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import { sendNetlifyForm } from '../../api';
 import Form from '../../components/Form/Form';
 import { FormPost, FormState } from '../../components/Form/types';
+import { RootState } from '../../slices';
+import { toggleShowContactModal } from '../../slices/layoutSlice';
 import ContactsIcons from './ContactsIcons/ContactsIcons';
 import './Contacts.scss';
+import SuccessModal from './SuccessModal/SuccessModal';
 
 const Contacts = () => {
+  const dispatch = useDispatch();
+  const isShowContactModal = useSelector((state: RootState) => state.layout.isShowContactModal);
+
   const handleSubmit = (data: FormState) => {
     const formBody: FormPost = { 'form-name': 'contact', ...data };
 
@@ -16,6 +24,7 @@ const Contacts = () => {
     }, '');
 
     sendNetlifyForm(preparedBody);
+    dispatch(toggleShowContactModal(true));
   };
 
   return (
@@ -24,6 +33,7 @@ const Contacts = () => {
       <div className="contacts__divider" />
       <Form onSubmit={handleSubmit} />
       <ContactsIcons />
+      {isShowContactModal && createPortal(<SuccessModal />, document.body)}
     </div>
   );
 };

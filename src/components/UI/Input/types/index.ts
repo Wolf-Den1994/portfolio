@@ -1,1 +1,1 @@
-export * from './Input.types';
+export * from './input.types';

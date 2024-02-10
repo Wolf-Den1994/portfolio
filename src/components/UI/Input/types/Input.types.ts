@@ -1,5 +1,4 @@
-// import { ChangeEvent } from 'react';
-import { FieldErrors, UseFormRegister } from 'react-hook-form';
+import type { FieldErrors, UseFormRegister } from 'react-hook-form';
 import { FormState } from '../../../Form/types';
 
 export const TEXTAREA_TYPE = 'textarea';
