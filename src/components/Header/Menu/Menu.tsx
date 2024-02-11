@@ -16,7 +16,7 @@ const Menu = () => (
           type="link"
           kind="link"
           linkOptions={{ linkUrl: '#projects' }}
-          styles={{ font: '700 18px/140% "Comfortaa"' }}
+          styles={{ font: '700 1.8rem/140% "Comfortaa"' }}
         >
           Projects
         </Button>
@@ -26,7 +26,7 @@ const Menu = () => (
           type="link"
           kind="link"
           linkOptions={{ linkUrl: '#contacts' }}
-          styles={{ font: '700 18px/140% "Comfortaa"' }}
+          styles={{ font: '700 1.8rem/140% "Comfortaa"' }}
         >
           Contacts
         </Button>

@@ -2,6 +2,14 @@
 @import './base/reset';
 @import './base/typography';
 
+:root {
+  font-size: 10px;
+
+  @media screen and (max-width: 740px) {
+    font-size: 8px;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;

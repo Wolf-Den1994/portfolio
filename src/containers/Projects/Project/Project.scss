@@ -29,19 +29,19 @@
   gap: 24px;
 
   &__title {
-    font: 700 40px/150% $font-family-title;
+    font: 700 4rem/150% $font-family-title;
     color: $main-color;
   }
 
   &__description {
-    font: 400 18px/150% $font-family-primary;
+    font: 400 1.8rem/150% $font-family-primary;
     color: $medium;
   }
 
   &__link {
     @include dflex();
 
-    font: 500 18px/150% $font-family-secondary;
+    font: 500 1.8rem/150% $font-family-secondary;
     color: $main-color;
   }
 
