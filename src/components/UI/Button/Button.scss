@@ -6,6 +6,7 @@
 
   border-radius: 8px;
 
+  text-align: center;
   font: 500 18px/150% 'Roboto';
   color: #25282b;
 
@@ -33,6 +34,11 @@
   }
 
   &.link {
+    padding: 0;
+    border: none;
+  }
+
+  &.project-info__link {
     background-color: transparent;
     border: 1px solid #25282b;
 

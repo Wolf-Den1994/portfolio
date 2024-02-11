@@ -14,7 +14,12 @@ const Project = ({ photoAlign, title, description, linkUrl, srcImage }: ProjectP
     <div className="project-info">
       <div className="project-info__title">{title}</div>
       <div className="project-info__description">{description}</div>
-      <Button kind="link" linkUrl={linkUrl} className="project-info__link" styles={{ maxWidth: 150, borderRadius: 24 }}>
+      <Button
+        type="link"
+        linkOptions={{ linkUrl, target: '_blank', rel: 'noreferrer' }}
+        className="project-info__link"
+        styles={{ maxWidth: 150, borderRadius: 24 }}
+      >
         View Project
       </Button>
     </div>

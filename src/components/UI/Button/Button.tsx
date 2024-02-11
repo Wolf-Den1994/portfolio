@@ -1,42 +1,48 @@
 import { ReactNode } from 'react';
 import './Button.scss';
 
+type Link = {
+  linkUrl: string;
+  target?: string;
+  rel?: string;
+};
+
 type ButtonProps = {
   children: string | ReactNode;
-  type?: 'button' | 'submit' | 'reset';
+  type?: 'button' | 'submit' | 'reset' | 'link';
   kind?: 'default' | 'primary' | 'link';
   styles?: Record<string, unknown>;
-  linkUrl?: string;
+  linkOptions?: Link;
   className?: string;
   onClick?: () => void;
 };
 
-const Button = ({ type, children, kind, styles, linkUrl, className, onClick }: ButtonProps) => {
+const Button = ({ type, children, kind, styles, linkOptions, className, onClick }: ButtonProps) => {
   const handleClick = () => {
     if (onClick) {
       onClick();
     }
   };
 
-  if (kind === 'link') {
+  if (type !== 'link') {
     return (
-      <a
-        href={linkUrl}
-        target="_blank"
-        rel="noreferrer"
-        className={`button ${kind} ${className}`}
-        style={{ ...styles }}
-        onClick={handleClick}
-      >
+      <button type={type} className={`button ${kind} ${className}`} style={{ ...styles }} onClick={handleClick}>
         {children}
-      </a>
+      </button>
     );
   }
 
   return (
-    <button type={type} className={`button ${kind} ${className}`} style={{ ...styles }} onClick={handleClick}>
+    <a
+      href={linkOptions?.linkUrl}
+      target={linkOptions?.target}
+      rel={linkOptions?.rel}
+      className={`button ${kind} ${className}`}
+      style={{ ...styles }}
+      onClick={handleClick}
+    >
       {children}
-    </button>
+    </a>
   );
 };
 
@@ -46,7 +52,11 @@ Button.defaultProps = {
   styles: {
     maxWidth: 115,
   },
-  linkUrl: '',
+  linkOptions: {
+    linkUrl: '',
+    target: '_self',
+    rel: '',
+  },
   className: '',
   onClick: () => undefined,
 };

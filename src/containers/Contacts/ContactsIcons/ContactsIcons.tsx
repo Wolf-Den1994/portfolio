@@ -6,7 +6,12 @@ import './ContactsIcons.scss';
 const ContactsIcons = () => (
   <div className="contacts-icons">
     {contactsIconsData.map(({ icon, linkUrl }) => (
-      <Button key={linkUrl} kind="link" linkUrl={linkUrl} className="icon-link">
+      <Button
+        key={linkUrl}
+        type="link"
+        linkOptions={{ linkUrl, target: '_blank', rel: 'noreferrer' }}
+        className="icon-link"
+      >
         <Icon name={icon} />
       </Button>
     ))}

@@ -3,4 +3,10 @@
   justify-content: center;
   align-items: center;
   gap: 48px;
+
+  a {
+    &:hover {
+      color: darken(#828282, 20%);
+    }
+  }
 }

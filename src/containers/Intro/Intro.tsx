@@ -11,8 +11,15 @@ const Intro = () => (
         about page.
       </div>
       <div className="bio__buttons">
-        <Button kind="primary">Projects</Button>
-        <Button>LinkedIn</Button>
+        <Button type="link" kind="primary" linkOptions={{ linkUrl: '#projects' }}>
+          Projects
+        </Button>
+        <Button
+          type="link"
+          linkOptions={{ linkUrl: 'https://www.linkedin.com/in/denis-karazan/', target: '_blank', rel: 'noreferrer' }}
+        >
+          LinkedIn
+        </Button>
       </div>
     </div>
   </div>

@@ -6,7 +6,11 @@ import { iconClose } from '../../../data/icons';
 import { toggleShowContactModal } from '../../../slices/layoutSlice';
 import './SuccessModal.scss';
 
-const SuccessModal = () => {
+type SuccessModalProps = {
+  text: string;
+};
+
+const SuccessModal = ({ text }: SuccessModalProps) => {
   const dispatch = useDispatch();
 
   const handleClose = () => {
@@ -16,7 +20,7 @@ const SuccessModal = () => {
   return (
     <Modal onClose={handleClose}>
       <div className="success-modal">
-        Your message was successfully sent! I will reply to you shortly.
+        {text}
         <Button kind="primary" onClick={handleClose}>
           OK
         </Button>
