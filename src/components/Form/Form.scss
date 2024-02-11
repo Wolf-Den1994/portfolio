@@ -1,5 +1,5 @@
+@import '../../styles/abstracts/variables';
+
 .form {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+  @include dflex(stretch, center, column, 40px);
 }

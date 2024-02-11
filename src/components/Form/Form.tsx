@@ -22,6 +22,7 @@ const Form = ({ onSubmit }: FormProps) => {
         labelText="Message"
         register={register}
         required
+        maxLength={2000}
         errors={errors}
       />
       <Button type="submit" kind="primary" styles={{ maxWidth: 90, alignSelf: 'flex-end' }}>

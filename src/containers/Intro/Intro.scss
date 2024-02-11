@@ -1,33 +1,33 @@
+@import '../../styles/abstracts/variables';
+
 .intro {
   max-width: 486px;
   width: 100%;
   margin-bottom: 112px;
 
-  display: flex;
-  flex-direction: column;
+  @include dflex(flex-start, center, column, 12px);
   align-self: flex-start;
-  gap: 12px;
 }
 
-.major {
+.intro-major {
   text-transform: uppercase;
-  font: bold 20px/27px 'Nunito';
-  color: #fdc435;
+  font: bold 20px/27px $font-family-primary;
+  color: $primary;
 }
 
-.bio {
+.intro-bio {
   display: flex;
   flex-direction: column;
   gap: 32px;
 
   &__title {
-    font: bold 64px/120% 'Playfair Display';
-    color: #25282b;
+    font: bold 64px/120% $font-family-title;
+    color: $main-color;
   }
 
   &__description {
-    font: 24px/150% 'Nunito';
-    color: #828282;
+    font: 24px/150% $font-family-primary;
+    color: $medium;
   }
 
   &__buttons {

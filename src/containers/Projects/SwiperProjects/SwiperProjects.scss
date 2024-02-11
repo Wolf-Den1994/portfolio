@@ -1,3 +1,5 @@
+@import '../../../styles/abstracts/variables';
+
 :root {
   --swiper-theme-color: #fdc435;
 }
@@ -16,12 +18,34 @@
   display: flex;
   text-rendering: auto;
   top: 55%;
+
+  &:hover {
+    --swiper-theme-color: #fdb503;
+  }
+
+  @media screen and (max-width: 1220px) {
+    top: 100%;
+  }
 }
 
 .swiper-button-prev-custom {
   left: -10%;
+
+  @media screen and (max-width: 1220px) {
+    left: 40%;
+  }
 }
 
 .swiper-button-next-custom {
   right: -10%;
+
+  @media screen and (max-width: 1220px) {
+    right: 40%;
+  }
+}
+
+.swiper-pagination {
+  @media screen and (max-width: 1220px) {
+    display: none;
+  }
 }

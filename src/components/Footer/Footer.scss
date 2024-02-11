@@ -1,11 +1,13 @@
+@import '../../styles/abstracts/variables';
+
 .footer {
   position: relative;
 }
 
 .footer-copy {
   text-align: center;
-  font: 400 16px/150% 'Nunito';
-  color: #828282;
+  font: 400 16px/150% $font-family-primary;
+  color: $medium;
 }
 
 .footer-space {

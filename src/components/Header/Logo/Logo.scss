@@ -1,7 +1,7 @@
+@import '../../../styles/abstracts/variables';
+
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  @include dflex(center, center, row, 10px);
 
   svg {
     height: 32px;

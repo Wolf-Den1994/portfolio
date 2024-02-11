@@ -6,12 +6,7 @@ import './Main.scss';
 
 const Main = () => (
   <main className="main-page">
-    <BackgroundImage
-      srcImage="./images/photos/my.png"
-      width={720}
-      height={620}
-      additionalStyles={{ position: 'absolute', top: 0, right: 0, zIndex: -1 }}
-    />
+    <BackgroundImage srcImage="./images/photos/my.png" className="main-photo" />
     <Intro />
     <Projects />
     <Contacts />

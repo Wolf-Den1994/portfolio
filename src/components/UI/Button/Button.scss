@@ -1,3 +1,5 @@
+@import '../../../styles/abstracts/variables';
+
 .button {
   padding: 8px;
 
@@ -7,29 +9,29 @@
   border-radius: 8px;
 
   text-align: center;
-  font: 500 18px/150% 'Roboto';
-  color: #25282b;
+  font: 500 18px/150% $font-family-secondary;
+  color: $main-color;
 
   transition: 0.2s;
   cursor: pointer;
 
   &.default {
     background-color: transparent;
-    border: 2px solid #25282b;
+    border: 2px solid $main-color;
 
     &:hover {
-      background-color: darken(#fff, 10%);
-      border: 2px solid darken(#25282b, 10%);
+      background-color: $bg-secondary-darken;
+      border: 2px solid $main-color-darken;
     }
   }
 
   &.primary {
-    background-color: #fdc435;
-    border: 2px solid #fdc435;
+    background-color: $primary;
+    border: 2px solid $primary;
 
     &:hover {
-      background-color: darken(#fdc435, 10%);
-      border: 2px solid darken(#fdc435, 10%);
+      background-color: $primary-darken;
+      border: 2px solid $primary-darken;
     }
   }
 
@@ -40,28 +42,25 @@
 
   &.project-info__link {
     background-color: transparent;
-    border: 1px solid #25282b;
+    border: 1px solid $main-color;
 
     &:hover {
-      background-color: darken(#fff, 10%);
-      border: 1px solid darken(#25282b, 10%);
+      background-color: $bg-secondary-darken;
+      border: 1px solid $main-color-darken;
     }
   }
 
   &.icon-link {
     padding: 0;
-
     width: auto;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include dflex();
 
     background-color: transparent;
     border: 0;
 
     transition: 0.7s;
-    color: #25282b;
+    color: $main-color;
 
     &:hover {
       transform: rotate(360deg);
@@ -69,7 +68,7 @@
       background-color: transparent;
       border: 0;
 
-      color: darken(#25282b, 10%);
+      color: $main-color-darken;
     }
   }
 }

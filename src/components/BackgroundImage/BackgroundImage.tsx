@@ -5,16 +5,21 @@ type BackgroundImageProps = {
   width?: number | string;
   height?: number | string;
   additionalStyles?: Record<string, unknown>;
+  className?: string;
 };
 
-const BackgroundImage = ({ srcImage, width, height, additionalStyles }: BackgroundImageProps) => (
-  <i className="background-image" style={{ backgroundImage: `url(${srcImage})`, width, height, ...additionalStyles }} />
+const BackgroundImage = ({ srcImage, width, height, className, additionalStyles }: BackgroundImageProps) => (
+  <i
+    className={`background-image ${className}`}
+    style={{ backgroundImage: `url(${srcImage})`, width, height, ...additionalStyles }}
+  />
 );
 
 BackgroundImage.defaultProps = {
-  width: 100,
-  height: 100,
+  width: '',
+  height: '',
   additionalStyles: {},
+  className: '',
 };
 
 export default BackgroundImage;

@@ -3,14 +3,14 @@ import './Intro.scss';
 
 const Intro = () => (
   <div className="intro">
-    <div className="major">Front-end | Fullstack developer</div>
-    <div className="bio">
-      <div className="bio__title">Hello, my name is Denis Karazan</div>
-      <div className="bio__description">
+    <div className="intro-major">Front-end | Fullstack developer</div>
+    <div className="intro-bio">
+      <div className="intro-bio__title">Hello, my name is Denis Karazan</div>
+      <div className="intro-bio__description">
         Short text with details about you, what you do or your professional career. You can add more information on the
         about page.
       </div>
-      <div className="bio__buttons">
+      <div className="intro-bio__buttons">
         <Button type="link" kind="primary" linkOptions={{ linkUrl: '#projects' }}>
           Projects
         </Button>

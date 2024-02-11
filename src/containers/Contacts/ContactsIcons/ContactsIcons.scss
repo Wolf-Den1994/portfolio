@@ -1,7 +1,6 @@
+@import '../../../styles/abstracts/variables';
+
 .contacts-icons {
   margin: 56px auto 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
+  @include dflex(center, center, row, 24px);
 }

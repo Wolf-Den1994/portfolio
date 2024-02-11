@@ -10,6 +10,7 @@ export type InputProps = {
   labelText?: string;
   register: UseFormRegister<FormState>;
   required?: boolean;
+  maxLength?: number;
   errors: FieldErrors<FormState>;
 } & (
   | {

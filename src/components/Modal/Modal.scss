@@ -1,3 +1,5 @@
+@import '../../styles/abstracts/variables';
+
 .cover {
   width: 100vw;
   height: 100vh;
@@ -7,7 +9,7 @@
   left: 0;
   z-index: 11;
 
-  background-color: #0000007a;
+  background-color: $bg-cover;
 }
 
 .modal {
@@ -19,7 +21,7 @@
   transform: translate(-50%, -50%);
   z-index: 12;
 
-  background-color: #fff;
+  background-color: $bg-secondary;
 
   border-radius: 12px;
 }

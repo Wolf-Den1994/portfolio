@@ -8,7 +8,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: $high;
+  background: $main-color;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -26,12 +26,12 @@ html {
 
 body {
   margin: 0;
-  color: $high;
+  color: $main-color;
   font-family: $font-family-primary;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: #f9faff;
+  background: $bg-main;
 }
 
 code {
@@ -49,7 +49,7 @@ code {
 a {
   text-decoration: none;
   transition: 0.3s;
-  color: $high;
+  color: $main-color;
 
   &:focus {
     outline: none;

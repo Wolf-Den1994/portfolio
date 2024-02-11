@@ -1,5 +1,6 @@
 .header {
-  margin: 0 0 54px;
+  max-width: 1200px;
+  margin: 0 auto 54px;
   padding: 12px 0;
 
   display: flex;
@@ -8,4 +9,8 @@
   gap: 10px;
 
   font: bold 18px/140% 'Comfortaa';
+
+  @media screen and (max-width: 1220px) {
+    padding: 12px 40px;
+  }
 }

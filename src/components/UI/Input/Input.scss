@@ -1,3 +1,5 @@
+@import '../../../styles/abstracts/variables';
+
 .input-wrap {
   position: relative;
 
@@ -7,8 +9,8 @@
 }
 
 .label {
-  font: 600 22px/150% 'Nunito';
-  color: #25282b;
+  font: 600 22px/150% $font-family-primary;
+  color: $main-color;
 }
 
 .textarea,
@@ -16,12 +18,12 @@
   display: flex;
   align-items: center;
 
-  background: #ffffff;
-  border: 1px solid #e8ecf4;
+  background: $bg-secondary;
+  border: 1px solid $border-color;
   border-radius: 8px;
 
-  font: 400 16px/150% 'Nunito';
-  color: #424449;
+  font: 400 16px/150% $font-family-primary;
+  color: $main-color-darken;
 }
 
 .textarea {
@@ -43,7 +45,7 @@
   transform: scale(0);
   transition: all 0.3s;
 
-  color: #e83b46;
+  color: $danger;
 
   &.show {
     opacity: 1;

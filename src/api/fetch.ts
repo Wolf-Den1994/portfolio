@@ -12,7 +12,6 @@ const request = async (url: string, options: OptionsRequest) => {
     headers,
     body,
   });
-  console.warn('response!!!', response);
 
   if (response.ok) {
     return response;
