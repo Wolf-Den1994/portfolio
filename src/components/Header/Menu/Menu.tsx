@@ -21,10 +21,10 @@ const Menu = () => {
       <nav className={`navigation ${classNameNavigationMoblie}`}>
         <ul className="menu">
           <li>
-            <Link to="/">Resume</Link>
+            <Link to="/" onClick={toggleShowMenu}>Resume</Link>
           </li>
           <li>
-            <Link to="about">About</Link>
+            <Link to="about" onClick={toggleShowMenu}>About</Link>
           </li>
           <li>
             <Button
@@ -32,6 +32,7 @@ const Menu = () => {
               kind="link"
               linkOptions={{ linkUrl: '#projects' }}
               styles={{ font: '700 1.8rem/140% "Comfortaa"' }}
+              onClick={toggleShowMenu}
             >
               Projects
             </Button>
@@ -42,6 +43,7 @@ const Menu = () => {
               kind="link"
               linkOptions={{ linkUrl: '#contacts' }}
               styles={{ font: '700 1.8rem/140% "Comfortaa"' }}
+              onClick={toggleShowMenu}
             >
               Contacts
             </Button>
