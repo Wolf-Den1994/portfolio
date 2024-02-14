@@ -7,12 +7,32 @@
 
   @include dflex(flex-start, center, column, 12px);
   align-self: flex-start;
+
+  @media screen and (max-width: 740px) {
+    margin-bottom: 26px;
+  }
+
+  @media screen and (max-width: 500px) {
+    gap: 80px;
+  }
+
+  @media screen and (max-width: 400px) {
+    gap: 200px;
+  }
 }
 
 .intro-major {
   text-transform: uppercase;
-  font: bold 2.0rem/27px $font-family-primary;
+  font: bold 2rem/27px $font-family-primary;
   color: $primary;
+
+  @media screen and (max-width: 375px) {
+    text-shadow: -2px 2px 8px $main-color;
+
+    span {
+      display: none;
+    }
+  }
 }
 
 .intro-bio {
@@ -23,16 +43,46 @@
   &__title {
     font: bold 6.4rem/120% $font-family-title;
     color: $main-color;
+
+    @media screen and (max-width: 600px) {
+      max-width: 275px;
+    }
   }
 
   &__description {
     font: 2.4rem/150% $font-family-primary;
     color: $medium;
+
+    @media screen and (max-width: 740px) {
+      max-width: 275px;
+    }
+
+    @media screen and (max-width: 600px) {
+      max-width: 100%;
+      text-align: justify;
+
+      br {
+        display: none;
+      }
+    }
   }
 
   &__buttons {
     display: flex;
     align-items: center;
     gap: 12px;
+
+    @media screen and (max-width: 600px) {
+      justify-content: center;
+      gap: 28px;
+    }
+
+    @media screen and (max-width: 330px) {
+      gap: 12px;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    gap: 22px;
   }
 }

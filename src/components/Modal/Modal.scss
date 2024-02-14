@@ -1,17 +1,5 @@
 @import '../../styles/abstracts/variables';
 
-.cover {
-  width: 100vw;
-  height: 100vh;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 11;
-
-  background-color: $bg-cover;
-}
-
 .modal {
   padding: 20px;
 

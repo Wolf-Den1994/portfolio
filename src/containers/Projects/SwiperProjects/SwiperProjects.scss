@@ -25,6 +25,7 @@
 
   @media screen and (max-width: 1220px) {
     top: 100%;
+    --swiper-navigation-size: 32px;
   }
 }
 
@@ -34,6 +35,10 @@
   @media screen and (max-width: 1220px) {
     left: 40%;
   }
+
+  @media screen and (max-width: 460px) {
+    left: 35%;
+  }
 }
 
 .swiper-button-next-custom {
@@ -41,6 +46,10 @@
 
   @media screen and (max-width: 1220px) {
     right: 40%;
+  }
+
+  @media screen and (max-width: 460px) {
+    right: 35%;
   }
 }
 

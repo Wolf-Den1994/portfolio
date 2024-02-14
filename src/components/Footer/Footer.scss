@@ -8,10 +8,22 @@
   text-align: center;
   font: 400 1.6rem/150% $font-family-primary;
   color: $medium;
+
+  @media screen and (max-width: 740px) {
+    font-size: 1.8rem;
+  }
 }
 
 .footer-space {
   height: 350px;
+
+  @media screen and (max-width: 700px) {
+    height: 270px;
+  }
+
+  @media screen and (max-width: 700px) {
+    height: 160px;
+  }
 }
 
 .footer-lava-lamp {
@@ -30,5 +42,17 @@
 
   @media screen and (max-width: 1280px) {
     height: 350px;
+  }
+
+  @media screen and (max-width: 700px) {
+    height: 300px;
+  }
+
+  @media screen and (max-width: 700px) {
+    height: 220px;
+  }
+
+  @media screen and (max-width: 700px) {
+    height: 150px;
   }
 }

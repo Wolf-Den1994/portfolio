@@ -3,12 +3,17 @@ import './Intro.scss';
 
 const Intro = () => (
   <div className="intro">
-    <div className="intro-major">Front-end | Fullstack developer</div>
+    <div className="intro-major">
+      Front-end | Fullstack <span>developer</span>
+    </div>
     <div className="intro-bio">
       <div className="intro-bio__title">Hello, my name is Denis Karazan</div>
       <div className="intro-bio__description">
-        Short text with details about you, what you do or your professional career. You can add more information on the
-        about page.
+        I can develop websites and web applications from scratch.
+        <br />
+        I have experience managing a team and working as a team.
+        <br />
+        I&#39;m constantly developing in the field of web development.
       </div>
       <div className="intro-bio__buttons">
         <Button type="link" kind="primary" linkOptions={{ linkUrl: '#projects' }}>

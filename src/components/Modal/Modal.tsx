@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import Cover from '../Cover/Cover';
 import './Modal.scss';
 
 type ModalProps = {
@@ -8,7 +9,7 @@ type ModalProps = {
 
 const Modal = ({ children, onClose }: ModalProps) => (
   <>
-    <div className="cover" onClick={onClose} role="presentation" />
+    <Cover onClose={onClose} />
     <div className="modal">{children}</div>
   </>
 );

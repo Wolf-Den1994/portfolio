@@ -3,7 +3,7 @@
 .projects {
   max-width: 992px;
   width: 100%;
-  margin: 0 auto 144px;
+  margin: 0 auto 36px;
   position: relative;
 
   &__title {
@@ -20,5 +20,13 @@
 
     background: $primary;
     border-radius: 2px;
+
+    @media screen and (max-width: 740px) {
+      margin: 0 auto 50px;
+    }
+
+    @media screen and (max-width: 550px) {
+      margin: 0 auto 30px;
+    }
   }
 }

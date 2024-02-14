@@ -1,11 +1,92 @@
 @import '../../../styles/abstracts/variables';
 
+.navigation {
+  @media screen and (max-width: 740px) {
+    width: 100%;
+    padding: 26px;
+
+    position: absolute;
+    right: -100%;
+    top: 0;
+    z-index: 12;
+
+    background: $bg-secondary;
+    border-radius: 0 0 10px 10px;
+
+    transition: right 0.5s;
+  }
+}
+
+.navigation-show {
+  @media screen and (max-width: 740px) {
+    right: 0;
+    transition: right 0.5s;
+  }
+}
+
 .menu {
   @include dflex(center, center, row, 48px);
 
   a {
     &:hover {
       color: $medium-darken20;
+    }
+  }
+
+  @media screen and (max-width: 740px) {
+    @include dflex(center, center, column, 10px);
+
+    li,
+    a {
+      width: 100%;
+    }
+
+    a {
+      height: 32px;
+      @include dflex();
+
+      border-radius: 8px;
+      text-align: center;
+
+      &:hover {
+        background-color: $bg-main;
+      }
+    }
+  }
+}
+
+.menu-item-close {
+  display: none;
+
+  .button {
+    height: auto;
+    width: 100%;
+    transition: color 0.2s;
+  }
+
+  @media screen and (max-width: 740px) {
+    @include dflex();
+  }
+}
+
+.button {
+  &.menu-button {
+    transition: color 0.2s;
+
+    width: 32px;
+    height: 32px;
+
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    &.button-show {
+      display: none;
+
+      @media screen and (max-width: 740px) {
+        display: block;
+      }
     }
   }
 }

@@ -5,6 +5,7 @@
 
   height: 44px;
   width: 100%;
+  @include dflex();
 
   border-radius: 8px;
 
@@ -12,7 +13,7 @@
   font: 500 1.8rem/150% $font-family-secondary;
   color: $main-color;
 
-  transition: 0.2s;
+  transition: background-color 0.2s, border 0.2s;
   cursor: pointer;
 
   &.default {
@@ -59,7 +60,7 @@
     background-color: transparent;
     border: 0;
 
-    transition: 0.7s;
+    transition: transform 0.7s, color 0.2s;
     color: $main-color;
 
     &:hover {
@@ -70,5 +71,9 @@
 
       color: $main-color-darken;
     }
+  }
+
+  @media screen and (max-width: 740px) {
+    height: 38px;
   }
 }

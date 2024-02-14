@@ -24,6 +24,10 @@
 
   font: 400 1.6rem/150% $font-family-primary;
   color: $main-color-darken;
+
+  @media screen and (max-width: 740px) {
+    font-size: 1.8rem;
+  }
 }
 
 .textarea {

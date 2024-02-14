@@ -15,6 +15,10 @@
   }
 
   @media screen and (max-width: 740px) {
-    gap: 50px;
+    gap: 40px;
+  }
+
+  @media screen and (max-width: 550px) {
+    padding: 0 20px;
   }
 }
