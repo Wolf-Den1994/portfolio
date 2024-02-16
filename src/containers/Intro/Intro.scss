@@ -26,10 +26,16 @@
   font: bold 2rem/27px $font-family-primary;
   color: $primary;
 
-  @media screen and (max-width: 375px) {
-    text-shadow: -2px 2px 8px $main-color;
+  @media screen and (max-width: 700px) {
+    color: $main-color;
+    text-shadow: $text-shadow;
+  }
 
-    span {
+  @media screen and (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+
+    &__spec {
       display: none;
     }
   }

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { iconMenu, iconTwoArrowRight } from '../../../data/icons';
 import Cover from '../../Cover/Cover';
 import Button from '../../UI/Button/Button';
@@ -21,32 +21,40 @@ const Menu = () => {
       <nav className={`navigation ${classNameNavigationMoblie}`}>
         <ul className="menu">
           <li>
-            <Link to="/" onClick={toggleShowMenu}>Resume</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? 'menu__link_active' : '')}
+              onClick={() => setIsShowMobileMenu(false)}
+            >
+              Resume
+            </NavLink>
           </li>
           <li>
-            <Link to="about" onClick={toggleShowMenu}>About</Link>
+            <NavLink
+              to="about"
+              className={({ isActive }) => (isActive ? 'menu__link_active' : '')}
+              onClick={() => setIsShowMobileMenu(false)}
+            >
+              About
+            </NavLink>
           </li>
           <li>
-            <Button
-              type="link"
-              kind="link"
-              linkOptions={{ linkUrl: '#projects' }}
-              styles={{ font: '700 1.8rem/140% "Comfortaa"' }}
-              onClick={toggleShowMenu}
+            <NavLink
+              to="/projects"
+              className={({ isActive }) => (isActive ? 'menu__link_active' : '')}
+              onClick={() => setIsShowMobileMenu(false)}
             >
               Projects
-            </Button>
+            </NavLink>
           </li>
           <li>
-            <Button
-              type="link"
-              kind="link"
-              linkOptions={{ linkUrl: '#contacts' }}
-              styles={{ font: '700 1.8rem/140% "Comfortaa"' }}
-              onClick={toggleShowMenu}
+            <NavLink
+              to="/contacts"
+              className={({ isActive }) => (isActive ? 'menu__link_active' : '')}
+              onClick={() => setIsShowMobileMenu(false)}
             >
               Contacts
-            </Button>
+            </NavLink>
           </li>
           <li className="menu-item-close">
             <Button className="icon-link" onClick={toggleShowMenu} styles={{ maxWidth: '100%' }}>

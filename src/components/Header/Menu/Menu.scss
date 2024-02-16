@@ -27,9 +27,38 @@
 .menu {
   @include dflex(center, center, row, 48px);
 
+  &__link {
+    border-color: $primary;
+    transition: 0.2s;
+
+    &_active {
+      color: $main-color-darken;
+      text-shadow: $text-shadow;
+      border-bottom: 2px solid $primary;
+      padding-bottom: 4px;
+
+      @media screen and (max-width: 740px) {
+        color: $primary;
+        text-shadow: none;
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+  }
+
   a {
     &:hover {
-      color: $medium-darken20;
+      color: $main-color-darken;
+      text-shadow: $text-shadow;
+      border-bottom: 2px solid $primary;
+      padding-bottom: 4px;
+
+      @media screen and (max-width: 740px) {
+        color: $primary;
+        text-shadow: none;
+        border-bottom: none;
+        padding-bottom: 0;
+      }
     }
   }
 
@@ -47,10 +76,6 @@
 
       border-radius: 8px;
       text-align: center;
-
-      &:hover {
-        background-color: $bg-main;
-      }
     }
   }
 }
@@ -62,6 +87,10 @@
     height: auto;
     width: 100%;
     transition: color 0.2s;
+
+    &:hover {
+      color: $primary;
+    }
   }
 
   @media screen and (max-width: 740px) {

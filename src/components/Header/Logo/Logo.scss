@@ -6,4 +6,10 @@
   svg {
     height: 32px;
   }
+
+  span {
+    @media screen and (max-width: 700px) {
+      text-shadow: $text-shadow;
+    }
+  }
 }

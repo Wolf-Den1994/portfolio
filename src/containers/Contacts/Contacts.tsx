@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, forwardRef, Ref } from 'react';
 import { createPortal } from 'react-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { sendNetlifyForm } from '../../api';
@@ -13,7 +13,7 @@ import SuccessModal from './SuccessModal/SuccessModal';
 const successText = 'Your message was successfully sent! I will reply to you shortly.';
 const failureText = 'Something went wrong. Use the contacts below to contact me.';
 
-const Contacts = () => {
+const Contacts = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
   const dispatch = useDispatch();
   const isShowContactModal = useSelector((state: RootState) => state.layout.isShowContactModal);
 
@@ -35,7 +35,7 @@ const Contacts = () => {
   };
 
   return (
-    <div id="contacts" className="contacts">
+    <div id="contacts" className="contacts" ref={forwardedRef}>
       <div className="contacts__title">Contacts</div>
       <div className="contacts__divider" />
       <Form onSubmit={handleSubmit} />
@@ -43,6 +43,6 @@ const Contacts = () => {
       {isShowContactModal && createPortal(<SuccessModal text={isSuccess ? successText : failureText} />, document.body)}
     </div>
   );
-};
+});
 
 export default Contacts;

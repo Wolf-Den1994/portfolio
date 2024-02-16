@@ -4,7 +4,10 @@ import './Intro.scss';
 const Intro = () => (
   <div className="intro">
     <div className="intro-major">
-      Front-end | Fullstack <span>developer</span>
+      <span>Front-end</span>
+      <span className="intro-major__spec"> | </span>
+      <span>Fullstack</span>
+      <span className="intro-major__spec">developer</span>
     </div>
     <div className="intro-bio">
       <div className="intro-bio__title">Hello, my name is Denis Karazan</div>

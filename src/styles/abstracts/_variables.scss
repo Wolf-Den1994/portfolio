@@ -14,6 +14,8 @@ $primary-darken: darken($primary, 10%);
 $medium-darken20: darken($medium, 20%);
 $bg-secondary-darken: darken($bg-secondary, 10%);
 
+$text-shadow: 0px 4px 4px $shadow;
+
 $font-family-primary: 'Nunito', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
 $font-family-secondary: 'Roboto', 'Nunito', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
