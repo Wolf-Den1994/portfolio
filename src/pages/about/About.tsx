@@ -1,9 +1,12 @@
 import AboutMe from '../../containers/AboutMe/AboutMe';
+import Contacts from '../../containers/Contacts/Contacts';
+import './About.scss';
 
 const About = () => (
-  <div className="about">
+  <main className="about">
     <AboutMe />
-  </div>
+    <Contacts />
+  </main>
 );
 
 export default About;

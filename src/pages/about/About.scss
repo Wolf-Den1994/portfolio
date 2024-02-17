@@ -1,0 +1,25 @@
+@import '../../styles/abstracts/variables';
+
+.about {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include dflex(center, flex-start, column, 144px);
+
+  @media screen and (max-width: 1220px) {
+    padding: 0 40px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    gap: 80px;
+  }
+
+  @media screen and (max-width: 740px) {
+    gap: 40px;
+  }
+
+  @media screen and (max-width: 550px) {
+    padding: 0 20px;
+  }
+}

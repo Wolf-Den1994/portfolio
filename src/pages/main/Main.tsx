@@ -33,7 +33,7 @@ const Main = () => {
 
   return (
     <main className="main-page">
-      <BackgroundImage srcImage="./images/photos/my.png" className="main-photo" />
+      <BackgroundImage srcImage="./images/photos/my_1.png" className="main-photo" />
       <Intro />
       <Projects ref={containers.projects} />
       <Contacts ref={containers.contacts} />
