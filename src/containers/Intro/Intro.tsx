@@ -3,22 +3,22 @@ import './Intro.scss';
 
 const Intro = () => (
   <div className="intro">
-    <div className="intro-major">
+    <div className="intro-major wow fadeInLeft">
       <span>Front-end</span>
       <span className="intro-major__spec"> | </span>
       <span>Fullstack</span>
       <span className="intro-major__spec">developer</span>
     </div>
     <div className="intro-bio">
-      <div className="intro-bio__title">Hello, my name is Denis Karazan</div>
-      <div className="intro-bio__description">
+      <div className="intro-bio__title wow fadeInLeft" data-wow-delay="0.2s">Hello, my name is Denis Karazan</div>
+      <div className="intro-bio__description wow fadeInLeft" data-wow-delay="0.4s">
         I can develop websites and web applications from scratch.
         <br />
         I have experience managing a team and working as a team.
         <br />
         I&#39;m constantly developing in the field of web development.
       </div>
-      <div className="intro-bio__buttons">
+      <div className="intro-bio__buttons wow fadeInLeft" data-wow-delay="0.6s">
         <Button type="link" kind="primary" linkOptions={{ linkUrl: '#projects' }}>
           Projects
         </Button>
@@ -31,6 +31,6 @@ const Intro = () => (
       </div>
     </div>
   </div>
-);
+)
 
 export default Intro;

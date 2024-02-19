@@ -36,8 +36,8 @@ const Contacts = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
 
   return (
     <div id="contacts" className="contacts" ref={forwardedRef}>
-      <div className="contacts__title">Contacts</div>
-      <div className="contacts__divider" />
+      <div className="contacts__title wow fadeInDown">Contacts</div>
+      <div className="contacts__divider wow fadeInDown" />
       <Form onSubmit={handleSubmit} />
       <ContactsIcons />
       {isShowContactModal && createPortal(<SuccessModal text={isSuccess ? successText : failureText} />, document.body)}

@@ -5,12 +5,13 @@ import './ContactsIcons.scss';
 
 const ContactsIcons = () => (
   <div className="contacts-icons">
-    {contactsIconsData.map(({ icon, linkUrl }) => (
+    {contactsIconsData.map(({ icon, linkUrl, delayShow }) => (
       <Button
         key={linkUrl}
         type="link"
         linkOptions={{ linkUrl, target: '_blank', rel: 'noreferrer' }}
-        className="icon-link"
+        className="icon-link wow fadeIn"
+        animateDelay={delayShow}
       >
         <Icon name={icon} />
       </Button>

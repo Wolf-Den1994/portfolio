@@ -14,10 +14,11 @@ type ButtonProps = {
   styles?: Record<string, unknown>;
   linkOptions?: Link;
   className?: string;
+  animateDelay?: string;
   onClick?: () => void;
 };
 
-const Button = ({ type, children, kind, styles, linkOptions, className, onClick }: ButtonProps) => {
+const Button = ({ type, children, kind, styles, linkOptions, className, animateDelay, onClick }: ButtonProps) => {
   const handleClick = () => {
     if (onClick) {
       onClick();
@@ -26,7 +27,7 @@ const Button = ({ type, children, kind, styles, linkOptions, className, onClick 
 
   if (type !== 'link') {
     return (
-      <button type={type} className={`button ${kind} ${className}`} style={{ ...styles }} onClick={handleClick}>
+      <button type={type} className={`button ${kind} ${className}`} style={{ ...styles }} data-wow-delay={animateDelay} onClick={handleClick}>
         {children}
       </button>
     );
@@ -39,6 +40,7 @@ const Button = ({ type, children, kind, styles, linkOptions, className, onClick 
       rel={linkOptions?.rel}
       className={`button ${kind} ${className}`}
       style={{ ...styles }}
+      data-wow-delay={animateDelay}
       onClick={handleClick}
     >
       {children}
@@ -58,6 +60,7 @@ Button.defaultProps = {
     rel: '',
   },
   className: '',
+  animateDelay: '',
   onClick: () => undefined,
 };
 

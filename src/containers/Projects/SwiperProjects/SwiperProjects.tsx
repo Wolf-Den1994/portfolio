@@ -40,7 +40,8 @@ const SwiperProjects = () => {
         navigation
         loop
         modules={[Pagination]}
-        className="mySwiper"
+        className="mySwiper wow pulse"
+        data-wow-delay="0.3s"
         slidesPerView={1}
         spaceBetween={60}
         pagination={{

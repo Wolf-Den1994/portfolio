@@ -25,8 +25,8 @@ const Projects = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
 
   return (
     <div id="projects" className="projects" ref={forwardedRef}>
-      <div className="projects__title">Projects</div>
-      <div className="projects__divider" />
+      <div className="projects__title wow fadeInDown">Projects</div>
+      <div className="projects__divider wow fadeInDown" />
       <SwiperProjects />
     </div>
   );
