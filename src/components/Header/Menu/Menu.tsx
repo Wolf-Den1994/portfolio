@@ -26,7 +26,7 @@ const Menu = () => {
               className={({ isActive }) => (isActive ? 'menu__link_active' : '')}
               onClick={() => setIsShowMobileMenu(false)}
             >
-              Resume
+              Main
             </NavLink>
           </li>
           <li>

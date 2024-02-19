@@ -58,7 +58,7 @@ Button.defaultProps = {
   type: 'button',
   kind: 'default',
   styles: {
-    maxWidth: 115,
+    maxWidth: 140,
   },
   linkOptions: {
     linkUrl: '',

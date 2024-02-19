@@ -8,6 +8,10 @@
   @media screen and (max-width: 740px) {
     flex-direction: column;
   }
+
+  @media screen and (max-width: 550px) {
+    padding: 0 10px;
+  }
 }
 
 .about-me-bio {

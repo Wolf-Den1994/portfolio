@@ -21,8 +21,16 @@ const Intro = () => (
         I&#39;m constantly developing in the field of web development.
       </div>
       <div className="intro-bio__buttons wow fadeInLeft" data-wow-delay="0.6s">
-        <Button type="link" kind="primary" linkOptions={{ linkUrl: '#projects' }}>
-          Projects
+        <Button
+          type="link"
+          kind="primary"
+          linkOptions={{
+            linkUrl: 'https://drive.google.com/file/d/1nom46ho5jgztxnxOgQB967hjWqtR5bEO/view',
+            target: '_blank',
+            rel: 'noreferrer',
+          }}
+        >
+          Download CV
         </Button>
         <Button
           type="link"
