@@ -11,9 +11,9 @@ import { store } from './slices/index';
 const App = () => {
   useEffect(() => {
     new WOW.WOW({
-      live: true
+      live: true,
     }).init();
-  }, [])
+  }, []);
 
   return (
     <BrowserRouter>
@@ -28,7 +28,7 @@ const App = () => {
         <Footer />
       </Provider>
     </BrowserRouter>
-  )
-}
+  );
+};
 
 export default App;

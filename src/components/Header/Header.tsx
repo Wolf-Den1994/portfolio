@@ -7,6 +7,6 @@ const Header = () => (
     <Logo />
     <Menu />
   </header>
-)
+);
 
 export default Header;

@@ -10,7 +10,9 @@ const Intro = () => (
       <span className="intro-major__spec">developer</span>
     </div>
     <div className="intro-bio">
-      <div className="intro-bio__title wow fadeInLeft" data-wow-delay="0.2s">Hello, my name is Denis Karazan</div>
+      <div className="intro-bio__title wow fadeInLeft" data-wow-delay="0.2s">
+        Hello, my name is Denis Karazan
+      </div>
       <div className="intro-bio__description wow fadeInLeft" data-wow-delay="0.4s">
         I can develop websites and web applications from scratch.
         <br />
@@ -31,6 +33,6 @@ const Intro = () => (
       </div>
     </div>
   </div>
-)
+);
 
 export default Intro;

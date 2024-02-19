@@ -27,7 +27,13 @@ const Button = ({ type, children, kind, styles, linkOptions, className, animateD
 
   if (type !== 'link') {
     return (
-      <button type={type} className={`button ${kind} ${className}`} style={{ ...styles }} data-wow-delay={animateDelay} onClick={handleClick}>
+      <button
+        type={type}
+        className={`button ${kind} ${className}`}
+        style={{ ...styles }}
+        data-wow-delay={animateDelay}
+        onClick={handleClick}
+      >
         {children}
       </button>
     );
