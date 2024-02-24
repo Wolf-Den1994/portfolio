@@ -12,7 +12,7 @@ import { store } from './slices/index';
 const App = () => {
   useEffect(() => {
     new WOW.WOW({
-      live: true,
+      live: false,
     }).init();
   }, []);
 
