@@ -1,3 +1,4 @@
+import ParallaxWrap from '../../../components/Paralax/Paralax';
 import Button from '../../../components/UI/Button/Button';
 import './Project.scss';
 
@@ -26,7 +27,9 @@ const Project = ({ photoAlign, title, description, linkUrl, srcImage }: ProjectP
       </div>
     </div>
     <div className="project-preview">
-      <img src={srcImage} alt={title} className="project-preview__image" />
+      <ParallaxWrap>
+        <img src={srcImage} alt={title} className="project-preview__image" />
+      </ParallaxWrap>
     </div>
   </div>
 );

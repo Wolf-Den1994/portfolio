@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ParallaxProvider } from 'react-scroll-parallax';
 import WOW from 'wowjs';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
@@ -18,14 +19,16 @@ const App = () => {
   return (
     <BrowserRouter>
       <Provider store={store}>
-        <div className="wrapper">
-          <Header />
-          <Routes>
-            <Route path="/:block?" element={<Main />} />
-            <Route path="about" element={<About />} />
-          </Routes>
-        </div>
-        <Footer />
+        <ParallaxProvider>
+          <div className="wrapper">
+            <Header />
+            <Routes>
+              <Route path="/:block?" element={<Main />} />
+              <Route path="about" element={<About />} />
+            </Routes>
+          </div>
+          <Footer />
+        </ParallaxProvider>
       </Provider>
     </BrowserRouter>
   );
