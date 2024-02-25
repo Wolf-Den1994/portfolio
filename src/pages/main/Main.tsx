@@ -4,7 +4,7 @@ import BackgroundImage from '../../components/BackgroundImage/BackgroundImage';
 import Contacts from '../../containers/Contacts/Contacts';
 import Intro from '../../containers/Intro/Intro';
 import Projects from '../../containers/Projects/Projects';
-import Skills from '../../containers/Skills/Skills';
+import { SkillsFirstLayout } from '../../containers/Skills';
 import './Main.scss';
 
 interface Containers {
@@ -37,7 +37,7 @@ const Main = () => {
       <BackgroundImage srcImage="./images/photos/my_1.png" className="main-photo" />
       <Intro />
       <Projects ref={containers.projects} />
-      <Skills />
+      <SkillsFirstLayout />
       <Contacts ref={containers.contacts} />
     </main>
   );

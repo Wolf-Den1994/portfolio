@@ -1,5 +1,27 @@
+import type { FieldErrors, UseFormRegister } from 'react-hook-form';
+import { FormState } from '../../Form/types';
 import './Input.scss';
-import { InputProps, TEXTAREA_TYPE } from './types';
+
+const TEXTAREA_TYPE = 'textarea';
+
+type InputType = 'text' | 'email' | 'message';
+
+type InputProps = {
+  id?: string;
+  name: 'name' | 'email' | 'message';
+  labelText?: string;
+  register: UseFormRegister<FormState>;
+  required?: boolean;
+  maxLength?: number;
+  errors: FieldErrors<FormState>;
+} & (
+  | {
+      type: InputType;
+    }
+  | {
+      type: typeof TEXTAREA_TYPE;
+    }
+);
 
 const Input = ({ type, id, name, labelText, register, required, maxLength, errors }: InputProps) => {
   const InputElement =
@@ -26,6 +48,8 @@ const Input = ({ type, id, name, labelText, register, required, maxLength, error
 Input.defaultProps = {
   id: '',
   labelText: '',
+  required: false,
+  maxLength: 5000,
 };
 
 export default Input;

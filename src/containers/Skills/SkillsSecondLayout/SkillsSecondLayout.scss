@@ -1,0 +1,33 @@
+@import '../../../styles/abstracts/variables';
+
+.skills {
+  margin: 0 auto 36px;
+
+  &__title {
+    text-align: center;
+    font: bold 4.8rem/120% $font-family-title;
+    color: $main-color;
+    text-shadow: $text-shadow;
+  }
+
+  &__divider {
+    width: 100px;
+    height: 4px;
+    margin: 0 auto 40px;
+
+    background: $primary;
+    border-radius: 2px;
+
+    @media screen and (max-width: 740px) {
+      margin: 0 auto 25px;
+    }
+
+    @media screen and (max-width: 550px) {
+      margin: 0 auto 15px;
+    }
+  }
+}
+
+.am5-layer-30 {
+  display: none;
+}

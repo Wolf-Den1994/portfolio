@@ -2,6 +2,7 @@ import * as am5 from '@amcharts/amcharts5';
 import am5themesAnimated from '@amcharts/amcharts5/themes/Animated';
 import * as am5wc from '@amcharts/amcharts5/wc';
 import { useLayoutEffect } from 'react';
+import './ChartTagCloud.scss';
 
 interface Data {
   tag: string;
@@ -12,9 +13,9 @@ type ChartTagCloudProps = {
   data: Data[];
 };
 
-const ChartTagCloud = ({ data }: ChartTagCloudProps) => {
+export const ChartTagCloud = ({ data }: ChartTagCloudProps) => {
   useLayoutEffect(() => {
-    const root = am5.Root.new('chartdiv');
+    const root = am5.Root.new('chartdivtag');
 
     root.setThemes([am5themesAnimated.new(root)]);
 
@@ -56,7 +57,5 @@ const ChartTagCloud = ({ data }: ChartTagCloudProps) => {
     };
   }, []);
 
-  return <div id="chartdiv" style={{ width: '500px', height: '500px' }} />;
+  return <div id="chartdivtag" className="wow pulse" />;
 };
-
-export default ChartTagCloud;
