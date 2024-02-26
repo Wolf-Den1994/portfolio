@@ -1,7 +1,7 @@
 import * as am5 from '@amcharts/amcharts5';
 import * as am5hierarchy from '@amcharts/amcharts5/hierarchy';
 import am5themesAnimated from '@amcharts/amcharts5/themes/Animated';
-import { useLayoutEffect } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import './ChartCollapsible.scss';
 
 type ChartCollapsibleProps = {
@@ -32,6 +32,22 @@ type ChartCollapsibleProps = {
 };
 
 export const ChartCollapsible = ({ data, isMobile }: ChartCollapsibleProps) => {
+  const [mobileWidth, setMobileWidth] = useState<string | number>('auto');
+  const divRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = () => {
+    const { offsetWidth } = document.body;
+    setMobileWidth(isMobile ? offsetWidth : '');
+  };
+
+  useEffect(() => {
+    handleScroll();
+
+    window.addEventListener('resize', handleScroll);
+
+    return () => window.removeEventListener('resize', handleScroll);
+  }, [isMobile]);
+
   useLayoutEffect(() => {
     const root = am5.Root.new('chartdivcollapsible');
 
@@ -80,5 +96,5 @@ export const ChartCollapsible = ({ data, isMobile }: ChartCollapsibleProps) => {
     };
   }, [isMobile, data]);
 
-  return <div id="chartdivcollapsible" className="wow pulse" />;
+  return <div id="chartdivcollapsible" className="wow pulse" style={{ width: mobileWidth }} ref={divRef} />;
 };
