@@ -45,224 +45,292 @@ export const firstSkills = [
   { tag: 'PostCSS', weight: 0.46 },
 ];
 
+interface Skill {
+  name: string;
+  mobileHide: boolean;
+  value: number;
+  children?: Skill[];
+}
+
 export const secondSkills = {
   value: 0,
+  name: '',
+  mobileHide: false,
   children: [
     {
       name: 'JavaScript',
+      mobileHide: false,
       value: 5,
       children: [
         {
           name: 'TypeScript',
+          mobileHide: false,
           value: 4,
         },
       ],
     },
     {
       name: 'HTML',
+      mobileHide: false,
       value: 3,
     },
     {
       name: 'Browser Extension',
+      mobileHide: true,
       value: 3,
     },
     {
       name: 'RestAPI',
+      mobileHide: false,
       value: 2,
     },
     {
       name: 'CSS',
+      mobileHide: false,
       value: 2,
       children: [
         {
           name: 'Less',
+          mobileHide: true,
           value: 1,
         },
         {
           name: 'SCSS',
+          mobileHide: false,
           value: 1,
         },
         {
           name: 'SASS',
+          mobileHide: true,
           value: 1,
         },
         {
           name: 'PostCSS',
+          mobileHide: true,
           value: 1,
         },
       ],
     },
     {
       name: 'FE Frameworks',
+      mobileHide: false,
       value: 4,
       children: [
         {
           name: 'React',
+          mobileHide: false,
           value: 3,
         },
         {
           name: 'Vue',
+          mobileHide: false,
           value: 2,
         },
         {
           name: 'Angular',
+          mobileHide: false,
           value: 1,
         },
       ],
     },
     {
       name: 'Node.js',
+      mobileHide: false,
       value: 2,
       children: [
         {
           name: 'Express',
+          mobileHide: false,
           value: 1,
         },
         {
           name: 'Nestjs',
+          mobileHide: false,
           value: 1,
         },
       ],
     },
     {
       name: 'Databases',
+      mobileHide: false,
       value: 2,
       children: [
         {
           name: 'PostgreSQL',
+          mobileHide: true,
           value: 1,
         },
         {
           name: 'MySQL',
+          mobileHide: false,
           value: 1,
         },
         {
           name: 'ClickHouse',
+          mobileHide: false,
           value: 1,
         },
         {
           name: 'MongoDB',
+          mobileHide: false,
           value: 1,
         },
         {
           name: 'Redis',
+          mobileHide: false,
           value: 1,
         },
         {
           name: 'Prisma',
+          mobileHide: true,
           value: 1,
         },
       ],
     },
     {
       name: 'Libraries',
+      mobileHide: false,
       value: 3,
       children: [
         {
           name: 'Redux',
+          mobileHide: false,
           value: 1,
         },
         {
           name: 'Jest',
+          mobileHide: false,
           value: 1,
         },
         {
           name: 'ESLint',
+          mobileHide: false,
           value: 2,
         },
         {
           name: 'Prettier',
+          mobileHide: true,
           value: 2,
         },
         {
           name: 'RxJS',
+          mobileHide: true,
           value: 1,
         },
         {
           name: 'GraphQL',
+          mobileHide: true,
           value: 2,
         },
         {
           name: 'Socket.io',
+          mobileHide: true,
           value: 2,
         },
         {
           name: 'Webpack',
+          mobileHide: false,
           value: 2,
         },
         {
           name: 'AntDesign',
+          mobileHide: true,
           value: 2,
         },
         {
           name: 'Styled-components',
+          mobileHide: true,
           value: 2,
         },
         {
           name: 'Bootstrap',
+          mobileHide: true,
           value: 2,
         },
         {
           name: 'Material-UI',
+          mobileHide: true,
           value: 2,
         },
       ],
     },
     {
       name: 'Tools',
+      mobileHide: false,
       value: 2,
       children: [
         {
           name: 'Docker',
+          mobileHide: false,
           value: 1,
         },
         {
           name: 'JWT',
+          mobileHide: true,
           value: 1,
         },
         {
           name: 'Kibana',
+          mobileHide: true,
           value: 1,
         },
         {
           name: 'Sentry',
+          mobileHide: true,
           value: 1,
         },
         {
           name: 'Git',
+          mobileHide: false,
           value: 1,
         },
         {
           name: 'Jenkins',
+          mobileHide: true,
           value: 1,
         },
       ],
     },
     {
       name: 'Hosting',
+      mobileHide: true,
       value: 2,
       children: [
         {
           name: 'Amazon S3',
+          mobileHide: false,
           value: 1,
         },
         {
           name: 'Render',
+          mobileHide: false,
           value: 1,
         },
         {
           name: 'Vercel',
+          mobileHide: false,
           value: 1,
         },
         {
           name: 'Heroku',
+          mobileHide: false,
           value: 1,
         },
         {
           name: 'Netlify',
+          mobileHide: false,
           value: 1,
         },
       ],
     },
   ],
 };
+
+export const filterSkills = (skills: Skill[]): Skill[] =>
+  skills
+    .filter((skill) => !skill.mobileHide)
+    .map((skill) => ({
+      ...skill,
+      children: skill.children ? filterSkills(skill.children) : undefined,
+    }))
+    .filter((skill) => !skill.children || skill.children.length > 0);

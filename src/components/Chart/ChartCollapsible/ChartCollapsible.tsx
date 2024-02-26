@@ -7,25 +7,31 @@ import './ChartCollapsible.scss';
 type ChartCollapsibleProps = {
   data: {
     value: number;
+    name: string;
+    mobileHide: boolean;
     children: (
       | {
           name: string;
-          value: number;
-          children?: undefined;
-        }
-      | {
-          name: string;
+          mobileHide: boolean;
           value: number;
           children: {
             name: string;
+            mobileHide: boolean;
             value: number;
           }[];
         }
+      | {
+          name: string;
+          mobileHide: boolean;
+          value: number;
+          children?: undefined;
+        }
     )[];
   };
+  isMobile: boolean;
 };
 
-export const ChartCollapsible = ({ data }: ChartCollapsibleProps) => {
+export const ChartCollapsible = ({ data, isMobile }: ChartCollapsibleProps) => {
   useLayoutEffect(() => {
     const root = am5.Root.new('chartdivcollapsible');
 
@@ -52,6 +58,8 @@ export const ChartCollapsible = ({ data }: ChartCollapsibleProps) => {
         linkWithField: 'linkWith',
         manyBodyStrength: -10,
         centerStrength: 0.8,
+        minRadius: isMobile ? 20 : 15,
+        nodePadding: 0,
       }),
     );
 
@@ -70,7 +78,7 @@ export const ChartCollapsible = ({ data }: ChartCollapsibleProps) => {
     return () => {
       root.dispose();
     };
-  }, []);
+  }, [isMobile, data]);
 
   return <div id="chartdivcollapsible" className="wow pulse" />;
 };
