@@ -2,6 +2,7 @@ import * as am5 from '@amcharts/amcharts5';
 import am5themesAnimated from '@amcharts/amcharts5/themes/Animated';
 import * as am5wc from '@amcharts/amcharts5/wc';
 import { useLayoutEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import './ChartTagCloud.scss';
 
 interface Data {
@@ -14,6 +15,8 @@ type ChartTagCloudProps = {
 };
 
 export const ChartTagCloud = ({ data }: ChartTagCloudProps) => {
+  const isMobile = useMediaQuery({ query: '(max-width: 740px)' });
+
   useLayoutEffect(() => {
     const root = am5.Root.new('chartdivtag');
 
@@ -32,6 +35,7 @@ export const ChartTagCloud = ({ data }: ChartTagCloudProps) => {
         categoryField: 'tag',
         valueField: 'weight',
         calculateAggregates: true,
+        minFontSize: 14,
       }),
     );
 
@@ -47,15 +51,14 @@ export const ChartTagCloud = ({ data }: ChartTagCloudProps) => {
 
     series.labels.template.setAll({
       fontFamily: 'Courier New',
-      cursorOverStyle: 'pointer',
     });
 
-    series.data.setAll(data);
+    series.data.setAll(isMobile ? data.slice(0, 20) : data);
 
     return () => {
       root.dispose();
     };
-  }, []);
+  }, [isMobile]);
 
   return <div id="chartdivtag" className="wow pulse" />;
 };
