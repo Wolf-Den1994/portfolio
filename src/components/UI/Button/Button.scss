@@ -87,6 +87,10 @@
       background-color: $primary-darken;
       border: none;
     }
+
+    @media screen and (max-width: 740px) {
+      width: 38px;
+    }
   }
 
   @media screen and (max-width: 740px) {

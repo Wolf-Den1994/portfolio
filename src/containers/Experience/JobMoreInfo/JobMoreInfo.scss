@@ -10,7 +10,8 @@
 }
 
 .job-more-info {
+  width: calc(100% - 64px);
   margin-top: 10px;
-  font: 400 1.5rem/150% $font-family-primary;
+  font: 400 1.6rem/150% $font-family-primary;
   color: $medium;
 }

@@ -6,4 +6,12 @@
 
 .jobs {
   @include dflex(stretch, space-between, column, 40px);
+
+  @media screen and (max-width: 1110px) {
+    padding: 0 10px;
+  }
+
+  @media screen and (max-width: 740px) {
+    gap: 24px;
+  }
 }
