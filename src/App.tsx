@@ -20,7 +20,7 @@ const App = () => {
     <BrowserRouter>
       <Provider store={store}>
         <ParallaxProvider>
-          <div className="wrapper">
+          <div className="wrap">
             <Header />
             <Routes>
               <Route path="/:block?" element={<Main />} />

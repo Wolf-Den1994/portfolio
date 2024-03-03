@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { sendNetlifyForm } from '../../api';
 import Form from '../../components/Form/Form';
 import { FormPost, FormState } from '../../components/Form/types';
+import Title from '../../components/Title/Title';
 import { RootState } from '../../slices';
 import { toggleShowContactModal } from '../../slices/layoutSlice';
 import ContactsIcons from './ContactsIcons/ContactsIcons';
@@ -36,8 +37,7 @@ const Contacts = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
 
   return (
     <div id="contacts" className="contacts" ref={forwardedRef}>
-      <div className="contacts__title wow fadeInDown">Contacts</div>
-      <div className="contacts__divider wow fadeInDown" />
+      <Title text="Contacts" />
       <Form onSubmit={handleSubmit} />
       <ContactsIcons />
       {isShowContactModal && createPortal(<SuccessModal text={isSuccess ? successText : failureText} />, document.body)}

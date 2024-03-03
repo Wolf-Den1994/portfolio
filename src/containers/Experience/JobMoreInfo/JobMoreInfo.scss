@@ -1,0 +1,16 @@
+@import '../../../styles/abstracts/variables';
+
+.job-more-divider {
+  width: calc(100% - 64px);
+  height: 2px;
+  margin: 8px 0 11px 0;
+
+  background: $primary;
+  border-radius: 2px;
+}
+
+.job-more-info {
+  margin-top: 10px;
+  font: 400 1.5rem/150% $font-family-primary;
+  color: $medium;
+}

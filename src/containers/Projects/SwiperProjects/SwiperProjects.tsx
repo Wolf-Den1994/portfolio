@@ -15,11 +15,11 @@ const SwiperProjects = () => {
   const theSlides = useMemo(() => projectsData, []);
 
   const handlePrevious = useCallback(() => {
-    swiperRef.slidePrev();
+    swiperRef?.slidePrev();
   }, [swiperRef]);
 
   const handleNext = useCallback(() => {
-    swiperRef.slideNext();
+    swiperRef?.slideNext();
   }, [swiperRef]);
 
   return (

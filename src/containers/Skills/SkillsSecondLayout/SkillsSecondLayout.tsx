@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { ChartCollapsible } from '../../../components/Chart';
+import Title from '../../../components/Title/Title';
 import { secondSkills, filterSkills } from '../../../data/skills';
 import './SkillsSecondLayout.scss';
 
@@ -23,8 +24,7 @@ export const SkillsSecondLayout = () => {
 
   return (
     <div className="skills">
-      <div className="skills__title wow fadeInDown">Skills</div>
-      <div className="skills__divider wow fadeInDown" />
+      <Title text="Skills" />
       <ChartCollapsible data={skills} isMobile={isMobile} />
     </div>
   );

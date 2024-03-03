@@ -1,0 +1,21 @@
+@import '../../../styles/abstracts/variables';
+
+.job-content {
+  @include dflex(flex-start, space-between, column);
+
+  &__company {
+    font: 700 3.5rem/150% $font-family-title;
+    color: $main-color;
+  }
+
+  &__position {
+    font: 400 1.7rem/150% $font-family-primary;
+    color: $medium;
+  }
+
+  &__date {
+    margin-top: 6px;
+    font: bold 1.6rem/27px $font-family-primary;
+    color: $primary;
+  }
+}

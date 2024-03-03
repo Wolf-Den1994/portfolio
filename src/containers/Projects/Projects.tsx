@@ -1,5 +1,6 @@
 import { forwardRef, Ref, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Title from '../../components/Title/Title';
 import SwiperProjects from './SwiperProjects/SwiperProjects';
 import './Projects.scss';
 
@@ -25,8 +26,7 @@ const Projects = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
 
   return (
     <div id="projects" className="projects" ref={forwardedRef}>
-      <div className="projects__title wow fadeInDown">Projects</div>
-      <div className="projects__divider wow fadeInDown" />
+      <Title text="Projects" />
       <SwiperProjects />
     </div>
   );

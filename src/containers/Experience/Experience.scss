@@ -1,0 +1,9 @@
+@import '../../styles/abstracts/variables';
+
+.experience {
+  width: 100%;
+}
+
+.jobs {
+  @include dflex(stretch, space-between, column, 40px);
+}

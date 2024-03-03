@@ -2,6 +2,7 @@ import { MutableRefObject, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import BackgroundImage from '../../components/BackgroundImage/BackgroundImage';
 import Contacts from '../../containers/Contacts/Contacts';
+import Experience from '../../containers/Experience/Experience';
 import Intro from '../../containers/Intro/Intro';
 import Projects from '../../containers/Projects/Projects';
 import { SkillsFirstLayout } from '../../containers/Skills';
@@ -36,6 +37,7 @@ const Main = () => {
     <main className="main-page">
       <BackgroundImage srcImage="./images/photos/my_1.png" className="main-photo" />
       <Intro />
+      <Experience />
       <Projects ref={containers.projects} />
       <SkillsFirstLayout />
       <Contacts ref={containers.contacts} />

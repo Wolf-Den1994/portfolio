@@ -73,6 +73,22 @@
     }
   }
 
+  &.more {
+    width: 44px;
+
+    background-color: $primary;
+    border-radius: 50%;
+
+    outline: none;
+    box-shadow: none;
+    border: none;
+
+    &:hover {
+      background-color: $primary-darken;
+      border: none;
+    }
+  }
+
   @media screen and (max-width: 740px) {
     height: 38px;
   }
