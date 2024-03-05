@@ -5,6 +5,7 @@
 
   height: 44px;
   width: 100%;
+  max-width: 140px;
   @include dflex();
 
   border-radius: 8px;
@@ -48,6 +49,10 @@
     &:hover {
       background-color: $bg-secondary-darken;
       border: 1px solid $main-color-darken;
+    }
+
+    @media screen and (max-width: 900px) {
+      max-width: 130px;
     }
   }
 

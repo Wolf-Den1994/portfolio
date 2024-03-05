@@ -60,15 +60,33 @@
     }
   }
 
+  &__buttons {
+    width: 100%;
+    @include dflex(center, flex-start, row, 16px);
+
+    @media screen and (max-width: 900px) {
+      gap: 10px;
+    }
+
+    @media screen and (max-width: 600px) {
+      order: 2;
+      justify-content: center;
+    }
+
+    @media screen and (max-width: 320px) {
+      flex-wrap: wrap;
+    }
+  }
+
   &__link {
     @include dflex();
 
     font: 500 1.8rem/150% $font-family-secondary;
     color: $main-color;
+  }
 
-    @media screen and (max-width: 600px) {
-      order: 2;
-    }
+  @media screen and (max-width: 900px) {
+    margin: 0 20px;
   }
 
   @media screen and (max-width: 600px) {
@@ -106,9 +124,9 @@
     }
 
     @media screen and (max-width: 375px) {
-      max-height: 240px;
-      height: 240px;
-      min-height: 240px;
+      max-height: 250px;
+      height: 250px;
+      min-height: 250px;
     }
 
     @media screen and (max-width: 310px) {

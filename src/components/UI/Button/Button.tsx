@@ -57,9 +57,7 @@ const Button = ({ type, children, kind, styles, linkOptions, className, animateD
 Button.defaultProps = {
   type: 'button',
   kind: 'default',
-  styles: {
-    maxWidth: 140,
-  },
+  styles: {},
   linkOptions: {
     linkUrl: '',
     target: '_self',

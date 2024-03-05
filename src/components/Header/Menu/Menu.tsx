@@ -31,7 +31,7 @@ const Menu = () => {
             </li>
           ))}
           <li className="menu-item-close">
-            <Button className="icon-link" onClick={toggleShowMenu} styles={{ maxWidth: '100%' }}>
+            <Button className="icon-link" onClick={toggleShowMenu}>
               <Icon name={iconTwoArrowRight} />
             </Button>
           </li>

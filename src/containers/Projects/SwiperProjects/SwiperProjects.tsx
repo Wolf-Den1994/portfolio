@@ -50,7 +50,7 @@ const SwiperProjects = () => {
         }}
         onSwiper={setSwiperRef}
       >
-        {theSlides.map(({ photoAlign, title, description, linkUrl, srcImage }) => (
+        {theSlides.map(({ photoAlign, title, description, linkUrl, srcImage, tech }) => (
           <SwiperSlide key={title}>
             <Project
               photoAlign={photoAlign}
@@ -58,6 +58,7 @@ const SwiperProjects = () => {
               description={description}
               linkUrl={linkUrl}
               srcImage={srcImage}
+              techText={tech}
             />
           </SwiperSlide>
         ))}
