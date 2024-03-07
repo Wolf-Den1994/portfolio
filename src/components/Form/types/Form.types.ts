@@ -1,3 +1,5 @@
+import type { UseFormReset } from 'react-hook-form';
+
 export type FormState = {
   name: string;
   email: string;
@@ -10,5 +12,5 @@ export type FormPost = FormState & {
 };
 
 export type FormProps = {
-  onSubmit: (arg0: FormState) => void;
+  onSubmit: (state: FormState, reset: UseFormReset<FormState>) => void;
 };

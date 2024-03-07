@@ -1,5 +1,6 @@
 import { useState, forwardRef, Ref } from 'react';
 import { createPortal } from 'react-dom';
+import { UseFormReset } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { sendNetlifyForm } from '../../api';
 import Form from '../../components/Form/Form';
@@ -24,7 +25,7 @@ const Contacts = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
     dispatch(toggleShowContactModal(false));
   };
 
-  const handleSubmit = async (data: FormState) => {
+  const handleSubmit = async (data: FormState, reset: UseFormReset<FormState>) => {
     const formBody: FormPost = { 'form-name': 'contact', ...data };
 
     const preparedBody = Object.keys(formBody).reduce((acc, field, index) => {
@@ -37,6 +38,10 @@ const Contacts = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
     const isSent = await sendNetlifyForm(preparedBody);
     setIsSuccess(isSent);
     dispatch(toggleShowContactModal(true));
+
+    if (isSent) {
+      reset();
+    }
   };
 
   return (
