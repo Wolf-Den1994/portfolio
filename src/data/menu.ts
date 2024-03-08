@@ -8,6 +8,10 @@ const menuNav = [
     text: 'About',
   },
   {
+    to: 'skills',
+    text: 'Skills',
+  },
+  {
     to: '/projects',
     text: 'Projects',
   },

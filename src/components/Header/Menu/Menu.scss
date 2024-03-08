@@ -62,6 +62,10 @@
     }
   }
 
+  @media screen and (max-width: 800px) {
+    gap: 30px;
+  }
+
   @media screen and (max-width: 740px) {
     @include dflex(center, center, column, 10px);
 

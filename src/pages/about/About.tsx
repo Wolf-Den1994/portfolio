@@ -1,12 +1,9 @@
 import AboutMe from '../../containers/AboutMe/AboutMe';
 import Contacts from '../../containers/Contacts/Contacts';
-import { SkillsSecondLayout } from '../../containers/Skills';
-import './About.scss';
 
 const About = () => (
-  <main className="about">
+  <main className="page">
     <AboutMe />
-    <SkillsSecondLayout />
     <Contacts />
   </main>
 );

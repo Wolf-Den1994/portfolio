@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import About from './pages/about/About';
 import Main from './pages/main/Main';
+import Skills from './pages/skills/Skills';
 import { store } from './slices/index';
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
             <Routes>
               <Route path="/:block?" element={<Main />} />
               <Route path="about" element={<About />} />
+              <Route path="skills" element={<Skills />} />
             </Routes>
           </div>
           <Footer />

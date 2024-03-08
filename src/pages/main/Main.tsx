@@ -6,7 +6,6 @@ import Experience from '../../containers/Experience/Experience';
 import Intro from '../../containers/Intro/Intro';
 import Projects from '../../containers/Projects/Projects';
 import { SkillsFirstLayout } from '../../containers/Skills';
-import './Main.scss';
 
 interface Containers {
   [key: string]: MutableRefObject<HTMLDivElement | null>;
@@ -34,7 +33,7 @@ const Main = () => {
   }, [location]);
 
   return (
-    <main className="main-page">
+    <main className="page">
       <BackgroundImage srcImage="./images/photos/my_1.png" className="main-photo" />
       <Intro />
       <Experience />
