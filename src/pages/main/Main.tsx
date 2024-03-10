@@ -40,8 +40,8 @@ const Main = () => {
       <Experience />
       <Projects ref={containers.projects} />
       <SkillsFirstLayout />
-      <Contacts ref={containers.contacts} />
       <Interests />
+      <Contacts ref={containers.contacts} />
     </main>
   );
 };
