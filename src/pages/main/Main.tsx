@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import BackgroundImage from '../../components/BackgroundImage/BackgroundImage';
 import Contacts from '../../containers/Contacts/Contacts';
 import Experience from '../../containers/Experience/Experience';
+import Interests from '../../containers/Interests/Interests';
 import Intro from '../../containers/Intro/Intro';
 import Projects from '../../containers/Projects/Projects';
 import { SkillsFirstLayout } from '../../containers/Skills';
@@ -40,6 +41,7 @@ const Main = () => {
       <Projects ref={containers.projects} />
       <SkillsFirstLayout />
       <Contacts ref={containers.contacts} />
+      <Interests />
     </main>
   );
 };

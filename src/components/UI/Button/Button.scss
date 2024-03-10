@@ -78,6 +78,26 @@
     }
   }
 
+  &.icon-interest {
+    padding: 0;
+    width: 100px;
+    height: auto;
+
+    @include dflex(center, center, column, 2px);
+
+    background-color: transparent;
+    border: 0;
+
+    will-change: transform;
+    color: $main-color;
+    cursor: default;
+
+    &:hover {
+      background-color: transparent;
+      border: 0;
+    }
+  }
+
   &.more {
     width: 44px;
 
