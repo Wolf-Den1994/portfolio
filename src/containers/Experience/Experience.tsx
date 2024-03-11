@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
+import SlideToggleWrap from '../../components/SlideToggleWrap/SlideToggleWrap';
 import Title from '../../components/Title/Title';
 import jobsData from '../../data/jobs';
 import './Experience.scss';
-import Job from './Job/Job';
 
 const Experience = () => {
   const theJobsData = useMemo(() => jobsData, []);
@@ -11,8 +11,15 @@ const Experience = () => {
     <div className="experience">
       <Title text="Experience" />
       <div className="jobs">
-        {theJobsData.map((job) => (
-          <Job data={job} key={job.date} />
+        {theJobsData.map(({ company, position, date, moreInfo, blockAlignLeft }) => (
+          <SlideToggleWrap
+            key={date}
+            title={company}
+            description={position}
+            date={date}
+            moreInfo={moreInfo}
+            blockAlignLeft={blockAlignLeft}
+          />
         ))}
       </div>
     </div>

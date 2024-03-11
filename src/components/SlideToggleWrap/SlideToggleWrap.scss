@@ -1,6 +1,6 @@
-@import '../../../styles/abstracts/variables';
+@import '../../styles/abstracts/variables';
 
-.job {
+.slide-toggle-wrap {
   width: 70%;
   padding: 40px;
   position: relative;
@@ -23,10 +23,6 @@
     width: 100%;
     padding: 24px;
   }
-}
-
-.job-wrapper {
-  @include dflex(center, space-between);
 }
 
 .insides {
