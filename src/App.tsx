@@ -5,6 +5,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import WOW from 'wowjs';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import ScrollUp from './components/ScrollUp/ScrollUp';
 import About from './pages/about/About';
 import Main from './pages/main/Main';
 import Skills from './pages/skills/Skills';
@@ -28,6 +29,7 @@ const App = () => {
               <Route path="about" element={<About />} />
               <Route path="skills" element={<Skills />} />
             </Routes>
+            <ScrollUp />
           </div>
           <Footer />
         </ParallaxProvider>
