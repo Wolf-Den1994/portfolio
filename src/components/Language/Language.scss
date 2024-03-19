@@ -1,0 +1,56 @@
+@import '../../styles/abstracts/variables';
+
+.menu-item-language {
+  width: 48px;
+  height: 44px;
+  position: relative;
+
+  user-select: none;
+
+  &__wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 136px;
+    width: 58px;
+  }
+}
+
+.menu-language-settings {
+  display: none;
+
+  position: absolute;
+  top: 50px;
+  left: 4px;
+
+  background-color: $bg-secondary;
+  border-radius: 10px;
+  box-shadow: 3px 6px 15px 3px $shadow-secondary;
+
+  &.menu-language-settings_show {
+    padding: 10px;
+    @include dflex(center, center, column, 10px);
+  }
+
+  &__item {
+    cursor: pointer;
+    display: inline;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+      color: $main-color-darken;
+      text-shadow: $text-shadow;
+    }
+
+    &_active {
+      cursor: default;
+      color: $primary;
+
+      &:hover {
+        color: $primary;
+        text-shadow: none;
+      }
+    }
+  }
+}

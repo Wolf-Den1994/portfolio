@@ -98,6 +98,22 @@
     }
   }
 
+  &.icon-language {
+    padding: 0;
+
+    @include dflex(center, center);
+
+    background-color: transparent;
+    border: 0;
+    color: $main-color;
+
+    &:hover {
+      background-color: transparent;
+      border: 0;
+      color: $main-color-darken;
+    }
+  }
+
   &.more {
     width: 44px;
 

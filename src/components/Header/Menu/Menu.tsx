@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { iconMenu, iconTwoArrowRight } from '../../../data/icons';
 import menuNav from '../../../data/menu';
 import Cover from '../../Cover/Cover';
+import Language from '../../Language/Language';
 import Button from '../../UI/Button/Button';
 import Icon from '../../UI/Icon/Icon';
 import './Menu.scss';
@@ -30,6 +31,9 @@ const Menu = () => {
               </NavLink>
             </li>
           ))}
+          <li className="menu-item-language">
+            <Language />
+          </li>
           <li className="menu-item-close">
             <Button className="icon-link" onClick={toggleShowMenu}>
               <Icon name={iconTwoArrowRight} />
@@ -37,7 +41,10 @@ const Menu = () => {
           </li>
         </ul>
       </nav>
-      <Button className={`icon-link menu-button ${isShowMobileMenu ? '' : 'button-show'}`} onClick={toggleShowMenu}>
+      <Button
+        className={`icon-link menu-button ${isShowMobileMenu ? '' : 'menu-button_show'}`}
+        onClick={toggleShowMenu}
+      >
         <Icon name={iconMenu} />
       </Button>
       {isShowMobileMenu && createPortal(<Cover onClose={toggleShowMenu} />, document.body)}
