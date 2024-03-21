@@ -14,6 +14,10 @@
     height: 136px;
     width: 58px;
   }
+
+  @media screen and (max-width: 740px) {
+    @include dflex(center, center);
+  }
 }
 
 .menu-language-settings {
@@ -52,5 +56,17 @@
         text-shadow: none;
       }
     }
+
+    @media screen and (max-width: 740px) {
+      padding: 6px 12px;
+    }
+  }
+
+  @media screen and (max-width: 740px) {
+    @include dflex(center, center, row, 15px);
+
+    position: static;
+    top: auto;
+    left: auto;
   }
 }

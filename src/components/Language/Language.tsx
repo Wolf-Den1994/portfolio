@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useMediaQuery } from 'react-responsive';
 import { iconLanguage } from '../../data/icons';
 import { setLocalStorage, getLocalStorage } from '../../utils';
 import Button from '../UI/Button/Button';
@@ -25,6 +26,7 @@ const locales: Locales = {
 const Language = () => {
   const [isShowLanguageSettings, setIsShowLanguageSettings] = useState(false);
   const { i18n } = useTranslation();
+  const isMobile = useMediaQuery({ query: '(max-width: 740px)' });
 
   const handleChangeLanguage = (lang: string) => {
     setLocalStorage(KEY_LANGUAGE, lang);
@@ -37,6 +39,25 @@ const Language = () => {
       i18n.changeLanguage(lang);
     }
   }, []);
+
+  if (isMobile) {
+    return (
+      <ul className={`menu-language-settings ${isShowLanguageSettings ? 'menu-language-settings_show' : ''}`}>
+        {Object.keys(locales).map((locale) => (
+          <li
+            className={`menu-language-settings__item ${
+              i18n.resolvedLanguage === locale ? 'menu-language-settings__item_active' : ''
+            }`}
+            onClick={() => handleChangeLanguage(locale)}
+            role="presentation"
+            key={locale}
+          >
+            {locales[locale].title}
+          </li>
+        ))}
+      </ul>
+    );
+  }
 
   return (
     <div
