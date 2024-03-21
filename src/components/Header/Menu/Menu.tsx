@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
+import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { iconMenu, iconTwoArrowRight } from '../../../data/icons';
 import menuNav from '../../../data/menu';
@@ -11,6 +12,7 @@ import './Menu.scss';
 
 const Menu = () => {
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
+  const { t } = useTranslation();
 
   const toggleShowMenu = () => {
     setIsShowMobileMenu((prev) => !prev);
@@ -27,7 +29,7 @@ const Menu = () => {
                 className={({ isActive }) => (isActive ? 'menu__link_active' : '')}
                 onClick={() => setIsShowMobileMenu(false)}
               >
-                {text}
+                {t(text)}
               </NavLink>
             </li>
           ))}

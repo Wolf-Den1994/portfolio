@@ -1,23 +1,23 @@
 const menuNav = [
   {
     to: '/',
-    text: 'Main',
+    text: 'menu.main',
   },
   {
     to: 'about',
-    text: 'About',
+    text: 'menu.about',
   },
   {
     to: 'skills',
-    text: 'Skills',
+    text: 'menu.skills',
   },
   {
     to: '/projects',
-    text: 'Projects',
+    text: 'menu.projects',
   },
   {
     to: '/contacts',
-    text: 'Contacts',
+    text: 'menu.contacts',
   },
 ];
 

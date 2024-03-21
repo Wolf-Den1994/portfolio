@@ -26,7 +26,7 @@ const locales: Locales = {
 const Language = () => {
   const [isShowLanguageSettings, setIsShowLanguageSettings] = useState(false);
   const { i18n } = useTranslation();
-  const isMobile = useMediaQuery({ query: '(max-width: 740px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 840px)' });
 
   const handleChangeLanguage = (lang: string) => {
     setLocalStorage(KEY_LANGUAGE, lang);

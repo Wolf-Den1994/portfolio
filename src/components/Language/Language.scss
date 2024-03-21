@@ -15,7 +15,7 @@
     width: 58px;
   }
 
-  @media screen and (max-width: 740px) {
+  @media screen and (max-width: 840px) {
     @include dflex(center, center);
   }
 }
@@ -57,12 +57,12 @@
       }
     }
 
-    @media screen and (max-width: 740px) {
+    @media screen and (max-width: 840px) {
       padding: 6px 12px;
     }
   }
 
-  @media screen and (max-width: 740px) {
+  @media screen and (max-width: 840px) {
     @include dflex(center, center, row, 15px);
 
     position: static;
