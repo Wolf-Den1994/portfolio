@@ -52,5 +52,8 @@
       "button_view": "Посмотреть",
       "button_stack": "Тех стек"
     }
+  },
+  "skills": {
+    "title": "Навыки"
   }
 }

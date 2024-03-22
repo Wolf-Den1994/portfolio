@@ -52,5 +52,8 @@
       "button_view": "View Project",
       "button_stack": "Tech stack"
     }
+  },
+  "skills": {
+    "title": "Skills"
   }
 }
