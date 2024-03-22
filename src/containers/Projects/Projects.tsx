@@ -10,7 +10,6 @@ import { toggleShowProjectModal } from '../../slices/layoutSlice';
 import SwiperProjects from './SwiperProjects/SwiperProjects';
 import './Projects.scss';
 
-const prevModalText = 'Tech stack: ';
 const WHEN_CHANGE_ROUTE_IN_PX = 120;
 let lastScrollTop = 0;
 
@@ -45,7 +44,7 @@ const Projects = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
       {textModalProject &&
         createPortal(
           <ModalDefault
-            prevText={prevModalText}
+            prevText={t('projects.modal.prev_text')}
             text={textModalProject}
             textStyle={{ textAlign: 'right' }}
             prevTextStyle={{

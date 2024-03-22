@@ -51,6 +51,9 @@
       "description_8": "Creation of the entire landing page and site logic",
       "button_view": "View Project",
       "button_stack": "Tech stack"
+    },
+    "modal": {
+      "prev_text": "Tech stack: "
     }
   },
   "skills": {

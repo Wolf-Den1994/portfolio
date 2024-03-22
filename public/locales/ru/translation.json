@@ -51,6 +51,9 @@
       "description_8": "Создание всего лендинга и логики сайта",
       "button_view": "Посмотреть",
       "button_stack": "Тех стек"
+    },
+    "modal": {
+      "prev_text": "Тех стек: "
     }
   },
   "skills": {
