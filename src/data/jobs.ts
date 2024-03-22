@@ -1,34 +1,30 @@
 const jobsData = [
   {
-    company: 'Big Data Technologies',
-    position: 'FullStack Developer',
-    date: 'February 2023 - Present time, Remote',
-    moreInfo:
-      'Working with browser extensions and frontend widgets. Creating new microservices. Developing features for monitoring products, and optimizing queries in MongoDB. I actively sought and implemented solutions to enhance system resilience. Constructed Grafana dashboards through ETL processes. Optimized builds by reducing unnecessary code and replacing images. Updated projects (libraries, Webpack, Node.js, React, manifest). Streamlined casting. Gathered metrics using Prometheus. And contributed to documentation and testing.',
+    company: 'experience.job.company_1',
+    position: 'experience.job.position_1',
+    date: 'experience.job.date_1',
+    moreInfo: 'experience.job.more_info_1',
     blockAlignLeft: true,
   },
   {
-    company: 'Brymonsoft',
-    position: 'Front-end Developer',
-    date: 'December 2021 - January 2023, Gomel',
-    moreInfo:
-      'CRM support and refactoring. Creating new layouts for website redesign. Developing a dedicated "Expenses" page with analytics for CRM. Efficient backlog cleanup for an external company. Working with the Mapbox interactive map. Supporting and developing widgets and components for a website builder. Embedding widgets on client websites. Maintaining CRM for website builder administration, and creating a mobile version of CRM for seamless post administration (similar to Tinder).',
+    company: 'experience.job.company_2',
+    position: 'experience.job.position_2',
+    date: 'experience.job.date_2',
+    moreInfo: 'experience.job.more_info_2',
     blockAlignLeft: false,
   },
   {
-    company: 'JLLC “INGMAN ICE CREAM”',
-    position: 'Electronic Engineer',
-    date: 'August 2019 - December - 2021, Gomel',
-    moreInfo:
-      'Technical maintenance, repair, and troubleshooting of the ice cream production line. Monitoring parameters, adjusting electronic components and equipment blocks, conducting test checks. Ensuring proper and uninterrupted operation of industrial Domino printers.',
+    company: 'experience.job.company_3',
+    position: 'experience.job.position_3',
+    date: 'experience.job.date_3',
+    moreInfo: 'experience.job.more_info_3',
     blockAlignLeft: true,
   },
   {
-    company: 'JSC “GOMELDREV”',
-    position: 'Electronic Engineer',
-    date: 'August 2016 - August 2019, Rechytsa',
-    moreInfo:
-      'Diagnosing, analyzing, repairing, and servicing industrial electronics. Ensuring uninterrupted operation of automated production lines. Diagnosing PLC Siemens controller programs. Reading and creating electrical schematics. Managing parameters of complex industrial equipment (flow meters, pressure transducers, frequency converters, etc.).',
+    company: 'experience.job.company_4',
+    position: 'experience.job.position_4',
+    date: 'experience.job.date_4',
+    moreInfo: 'experience.job.more_info_4',
     blockAlignLeft: false,
   },
 ];

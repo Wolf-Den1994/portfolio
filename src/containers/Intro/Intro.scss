@@ -10,6 +10,10 @@
 
   &-ru {
     max-width: 555px;
+
+    .intro-bio__description {
+      max-width: 486px;
+    }
   }
 
   @media screen and (max-width: 1110px) {
