@@ -55,5 +55,18 @@
   },
   "skills": {
     "title": "Навыки"
+  },
+  "interests": {
+    "title": "Интересы",
+    "interest": {
+      "films": "Фильмы",
+      "music": "Музыка",
+      "games": "Игры",
+      "cars": "Автомобили",
+      "electronics": "Электроника",
+      "books": "Книги",
+      "travel": "Путешествие",
+      "self_study": "Учиться"
+    }
   }
 }

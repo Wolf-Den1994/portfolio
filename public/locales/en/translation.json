@@ -55,5 +55,18 @@
   },
   "skills": {
     "title": "Skills"
+  },
+  "interests": {
+    "title": "Interests",
+    "interest": {
+      "films": "Films",
+      "music": "Music",
+      "games": "Games",
+      "cars": "Cars",
+      "electronics": "Electronics",
+      "books": "Books",
+      "travel": "Travel",
+      "self_study": "Self study"
+    }
   }
 }

@@ -3,42 +3,42 @@ import { iconBook, iconCar, iconElectronicsChip, iconFilm, iconGame, iconMusic, 
 const interestsIconsData = [
   {
     icon: iconFilm,
-    text: 'Films',
+    text: 'interests.interest.films',
     delayShow: '0.2s',
   },
   {
     icon: iconMusic,
-    text: 'Music',
+    text: 'interests.interest.music',
     delayShow: '0.4s',
   },
   {
     icon: iconGame,
-    text: 'Games',
+    text: 'interests.interest.games',
     delayShow: '0.6s',
   },
   {
     icon: iconCar,
-    text: 'Cars',
+    text: 'interests.interest.cars',
     delayShow: '0.8s',
   },
   {
     icon: iconElectronicsChip,
-    text: 'Electronics',
+    text: 'interests.interest.electronics',
     delayShow: '1s',
   },
   {
     icon: iconBook,
-    text: 'Books',
+    text: 'interests.interest.books',
     delayShow: '1.2s',
   },
   {
     icon: iconTravel,
-    text: 'Travel',
+    text: 'interests.interest.travel',
     delayShow: '1.4s',
   },
   {
     icon: iconStudy,
-    text: 'Self study',
+    text: 'interests.interest.self_study',
     delayShow: '1.6s',
   },
 ];
