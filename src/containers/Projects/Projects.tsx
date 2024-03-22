@@ -1,5 +1,6 @@
 import { forwardRef, Ref, useEffect } from 'react';
 import { createPortal } from 'react-dom';
+import { useTranslation } from 'react-i18next';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import ModalDefault from '../../components/ModalDefault/ModalDefault';
@@ -14,6 +15,7 @@ const WHEN_CHANGE_ROUTE_IN_PX = 120;
 let lastScrollTop = 0;
 
 const Projects = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const textModalProject = useSelector((state: RootState) => state.layout.textModalProject);
@@ -38,7 +40,7 @@ const Projects = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
 
   return (
     <div id="projects" className="projects" ref={forwardedRef}>
-      <Title text="Projects" />
+      <Title text={t('projects.title')} />
       <SwiperProjects />
       {textModalProject &&
         createPortal(

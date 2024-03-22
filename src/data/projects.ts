@@ -2,7 +2,7 @@ const projectsData = [
   {
     photoAlign: 'right',
     title: 'Alitools',
-    description: 'Working with browser extensions, maintaining and creating microservices',
+    description: 'projects.project.description_1',
     tech: 'Browser extension, React, JavaScript, TypeScript, HTML, NodeJS, NestJS, Express, Jenkins, MongoDB, MySQL, ClickHouse, Redis, RxJS, Webpack, unit tests, Less, Git, Sentry, Kibana, PHP, Prometheus',
     linkUrl: 'https://alitools.io/',
     srcImage: './images/projects/p-1.jpg',
@@ -10,7 +10,7 @@ const projectsData = [
   {
     photoAlign: 'left',
     title: 'Impact Factors',
-    description: 'Creating a widget for the site-builder and working with admin CRM',
+    description: 'projects.project.description_2',
     tech: 'Vue2, JavaScript, Vuex, HTML, SCSS, Lodash, Vuetify, Git',
     linkUrl: 'https://impactfactors.net/',
     srcImage: './images/projects/p-2.jpg',
@@ -18,7 +18,7 @@ const projectsData = [
   {
     photoAlign: 'right',
     title: 'Musio',
-    description: 'Creating a page of costs and schedules for this',
+    description: 'projects.project.description_3',
     tech: 'Vue3, JavaScript, Vuex, HTML, SCSS, Lodash, i18n, Vue Apexcharts, Axios, Moment, Eslint, Git',
     linkUrl: 'https://crm.musio.io/',
     srcImage: './images/projects/p-3.jpg',
@@ -26,7 +26,7 @@ const projectsData = [
   {
     photoAlign: 'left',
     title: 'AtlasNXT',
-    description: 'Working with the map and data on it and troubleshooting',
+    description: 'projects.project.description_4',
     tech: 'React, Redux, MapBox, Ant Design, React Creatable, SCSS, Lodash, Axios, Coookie, JWT, i18next, Eslint, Git',
     linkUrl: 'https://app.atlasnxt.com/',
     srcImage: './images/projects/p-4.jpg',
@@ -34,7 +34,7 @@ const projectsData = [
   {
     photoAlign: 'right',
     title: 'Pointing Poker',
-    description: 'Final training project, teamwork and work with websockets',
+    description: 'projects.project.description_5',
     tech: 'React, Redux, TypeScript, Ant Design, Eslint, Axios, SCSS, Jest, Socket.io, NodeJS, Mongoose, Express, Git',
     linkUrl: 'https://pointing-poker-next.netlify.app/',
     srcImage: './images/projects/p-5.jpg',
@@ -42,7 +42,7 @@ const projectsData = [
   {
     photoAlign: 'left',
     title: 'English for kids',
-    description: 'Creating a backend, working with CRUD and creating the entire application',
+    description: 'projects.project.description_6',
     tech: 'TypeScript, Eslint, Prettier, SCSS, Webpack, NodeJS, Mongoose, Express, Heroku, Redux, Swagger, Cloudinary, Git',
     linkUrl: 'https://wolf-den1994-english-for-kids-2.netlify.app/',
     srcImage: './images/projects/p-6.jpg',
@@ -50,7 +50,7 @@ const projectsData = [
   {
     photoAlign: 'right',
     title: 'Match-Match game',
-    description: 'Working with typescript and creating the entire application',
+    description: 'projects.project.description_7',
     tech: 'TypeScript, Eslint, Prettier, SCSS, Webpack, Git',
     linkUrl: 'https://wolf-den1994-match-match-game.netlify.app/',
     srcImage: './images/projects/p-7.jpg',
@@ -58,7 +58,7 @@ const projectsData = [
   {
     photoAlign: 'left',
     title: 'Online ZOO',
-    description: 'Creation of the entire site landing and logic',
+    description: 'projects.project.description_8',
     tech: 'HTML, SCSS, JavaScript, Git',
     linkUrl: 'https://wolf-den1994-online-zoo.netlify.app/pages/main/',
     srcImage: './images/projects/p-8.jpg',

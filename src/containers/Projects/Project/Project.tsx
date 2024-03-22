@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 import ParallaxWrap from '../../../components/Paralax/Paralax';
 import Button from '../../../components/UI/Button/Button';
@@ -15,6 +16,7 @@ type ProjectProps = {
 
 const Project = ({ photoAlign, title, description, linkUrl, srcImage, techText }: ProjectProps) => {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   const handleClickTech = () => {
     dispatch(toggleShowProjectModal(techText));
@@ -25,7 +27,7 @@ const Project = ({ photoAlign, title, description, linkUrl, srcImage, techText }
       <div className="project-preview">
         <div className="project-info">
           <div className="project-info__title">{title}</div>
-          <div className="project-info__description">{description}</div>
+          <div className="project-info__description">{t(description)}</div>
           <div className="project-info__buttons">
             <Button
               type="link"
@@ -33,10 +35,10 @@ const Project = ({ photoAlign, title, description, linkUrl, srcImage, techText }
               className="project-info__link"
               styles={{ borderRadius: 24 }}
             >
-              View Project
+              {t('projects.project.button_view')}
             </Button>
             <Button className="project-info__link" styles={{ borderRadius: 24 }} onClick={handleClickTech}>
-              Tech stack
+              {t('projects.project.button_stack')}
             </Button>
           </div>
         </div>
