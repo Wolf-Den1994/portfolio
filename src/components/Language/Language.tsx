@@ -3,25 +3,12 @@ import { useTranslation } from 'react-i18next';
 import { useMediaQuery } from 'react-responsive';
 import { iconLanguage } from '../../data/icons';
 import { setLocalStorage, getLocalStorage } from '../../utils';
+import { locales } from '../../utils/locale';
 import Button from '../UI/Button/Button';
 import Icon from '../UI/Icon/Icon';
 import './Language.scss';
 
-type Locales = {
-  [k: string]: {
-    title: string;
-  };
-};
-
 const KEY_LANGUAGE = 'KEY_LANGUAGE';
-
-const english = 'en';
-const russian = 'ru';
-
-const locales: Locales = {
-  [english]: { title: 'EN' },
-  [russian]: { title: 'RU' },
-};
 
 const Language = () => {
   const [isShowLanguageSettings, setIsShowLanguageSettings] = useState(false);

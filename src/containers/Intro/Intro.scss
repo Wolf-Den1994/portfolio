@@ -8,6 +8,10 @@
   @include dflex(flex-start, center, column, 12px);
   align-self: flex-start;
 
+  &-ru {
+    max-width: 555px;
+  }
+
   @media screen and (max-width: 1110px) {
     padding: 0 10px;
   }

@@ -1,12 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import Button from '../../components/UI/Button/Button';
 import './Intro.scss';
+import { getClassLocale } from '../../utils/locale';
 
 const Intro = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
-    <div className="intro">
+    <div className={getClassLocale(i18n, 'intro')}>
       <div className="intro-major wow fadeInLeft">
         <span>Front-end</span>
         <span className="intro-major__spec"> | </span>
@@ -15,14 +16,14 @@ const Intro = () => {
       </div>
       <div className="intro-bio">
         <div className="intro-bio__title wow fadeInLeft" data-wow-delay="0.2s">
-          Hello, my name is Denis Karazan
+          {t('intro.title')}
         </div>
         <div className="intro-bio__description wow fadeInLeft" data-wow-delay="0.4s">
-          I can develop websites and web applications from scratch.
+          {t('intro.description_1')}
           <br />
-          I have experience managing a team and working as a team.
+          {t('intro.description_2')}
           <br />
-          I&#39;m constantly developing in the field of web development.
+          {t('intro.description_3')}
         </div>
         <div className="intro-bio__buttons wow fadeInLeft" data-wow-delay="0.6s">
           <Button
@@ -34,7 +35,7 @@ const Intro = () => {
               rel: 'noreferrer',
             }}
           >
-            Download CV
+            {t('intro.button_cv')}
           </Button>
           <Button
             type="link"

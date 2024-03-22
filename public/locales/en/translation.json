@@ -10,6 +10,11 @@
     "contacts": "Contacts"
   },
   "intro": {
-    "spec": "developer"
+    "spec": "developer",
+    "title": "Hello, my name is Denis Karazan",
+    "description_1": "I can develop websites and web applications from scratch. ",
+    "description_2": "I have experience managing a team and working as a team. ",
+    "description_3": "I'm constantly developing in the field of web development.",
+    "button_cv": "Download CV"
   }
 }
