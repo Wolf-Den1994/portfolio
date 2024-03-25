@@ -110,5 +110,10 @@
   },
   "footer": {
     "priority": "Prior to collaboration, it's essential to acknowledge that, as a seasoned web developer, I'm unable to accommodate “urgent tasks” or engage in projects of a duration shorter than a day. My focus is on cultivating enduring partnerships rather than pursuing quick, short-term gains"
+  },
+  "about": {
+    "title": "About me",
+    "description": "I'm an honest and responsible person. I get along well with people. I treat my work with maximum efficiency. I'm engaged in self-study. My first encounter with JavaScript was in June 2020. For me, technology is a tool",
+    "alt_text_photo": "it's my"
   }
 }
