@@ -71,5 +71,32 @@
       "travel": "Путешествие",
       "self_study": "Учиться"
     }
+  },
+  "education": {
+    "title": "Образование",
+    "certificate": {
+      "sert_name_1": "Высшее образование",
+      "course_1": "Факультет Автоматизированных и Информационных Систем",
+      "date_1": "Сентябрь 2011 - Июнь 2016",
+      "more_info_1": "ГГТУ имени Павла Сухого. Специалист / Инженер по радиоэлектронике",
+      "sert_name_2": "JavaScript/Front-end",
+      "course_2": "The Rolling Scopes School",
+      "date_2": "Декабрь 2020 - Июль 2021",
+      "sert_name_3": "React",
+      "course_3": "The Rolling Scopes School",
+      "date_3": "Июль 2021 - Окрябрь 2021",
+      "sert_name_4": "Angular",
+      "course_4": "The Rolling Scopes School",
+      "date_4": "Март 2022 - Май 2022",
+      "sert_name_5": "Общий курс английского языка",
+      "course_5": "Streamline",
+      "date_5": "Январь 2022 - Июнь 2022",
+      "sert_name_6": "NodeJS",
+      "course_6": "The Rolling Scopes School",
+      "date_6": "Май 2022 - Август 2022",
+      "sert_name_7": "Основы AWS",
+      "course_7": "The Rolling Scopes School",
+      "date_7": "Март 2023 - Апрель 2023"
+    }
   }
 }

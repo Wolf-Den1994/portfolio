@@ -71,5 +71,32 @@
       "travel": "Travel",
       "self_study": "Self study"
     }
+  },
+  "education": {
+    "title": "Education",
+    "certificate": {
+      "sert_name_1": "Higher education",
+      "course_1": "Faculty of Automated and Information Technologies",
+      "date_1": "September 2011 - June 2016",
+      "more_info_1": "GSTU named after Pavel Sukhoi. Specialist / Engineer in radio electronics",
+      "sert_name_2": "JavaScript/Front-end",
+      "course_2": "The Rolling Scopes School",
+      "date_2": "December 2020 - July 2021",
+      "sert_name_3": "React",
+      "course_3": "The Rolling Scopes School",
+      "date_3": "July 2021 - October 2021",
+      "sert_name_4": "Angular",
+      "course_4": "The Rolling Scopes School",
+      "date_4": "March 2022 - May 2022",
+      "sert_name_5": "General English Course",
+      "course_5": "Streamline",
+      "date_5": "January 2022 - June 2022",
+      "sert_name_6": "NodeJS",
+      "course_6": "The Rolling Scopes School",
+      "date_6": "May 2022 - August 2022",
+      "sert_name_7": "AWS Fundamentals",
+      "course_7": "The Rolling Scopes School",
+      "date_7": "March 2023 - April 2023"
+    }
   }
 }
