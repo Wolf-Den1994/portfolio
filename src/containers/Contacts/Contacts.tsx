@@ -1,6 +1,7 @@
 import { useState, forwardRef, Ref } from 'react';
 import { createPortal } from 'react-dom';
 import { UseFormReset } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { sendNetlifyForm } from '../../api';
 import Form from '../../components/Form/Form';
@@ -16,10 +17,11 @@ const successText = 'Your message was successfully sent! I will reply to you sho
 const failureText = 'Something went wrong. Use the contacts below to contact me.';
 
 const Contacts = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
+  const [isSuccess, setIsSuccess] = useState(false);
+
   const dispatch = useDispatch();
   const isShowContactModal = useSelector((state: RootState) => state.layout.isShowContactModal);
-
-  const [isSuccess, setIsSuccess] = useState(false);
+  const { t } = useTranslation();
 
   const handleClose = () => {
     dispatch(toggleShowContactModal(false));
@@ -46,7 +48,7 @@ const Contacts = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
 
   return (
     <div id="contacts" className="contacts" ref={forwardedRef}>
-      <Title text="Contacts" />
+      <Title text={t('contacts.title')} />
       <Form onSubmit={handleSubmit} />
       <ContactsIcons />
       {isShowContactModal &&

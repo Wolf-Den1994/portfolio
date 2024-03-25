@@ -134,6 +134,15 @@
     }
   }
 
+  &.form-send {
+    max-width: 90px;
+    align-self: flex-end;
+
+    &-ru {
+      max-width: 130px;
+    }
+  }
+
   @media screen and (max-width: 740px) {
     height: 38px;
   }

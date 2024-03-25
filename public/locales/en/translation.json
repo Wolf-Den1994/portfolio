@@ -98,5 +98,14 @@
       "course_7": "The Rolling Scopes School",
       "date_7": "March 2023 - April 2023"
     }
+  },
+  "contacts": {
+    "title": "Contacts",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "button_send": "Send"
+    }
   }
 }

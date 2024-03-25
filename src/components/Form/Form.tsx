@@ -1,10 +1,14 @@
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
+import { getClassLocale } from '../../utils/locale';
 import Button from '../UI/Button/Button';
 import Input from '../UI/Input/Input';
-import './Form.scss';
 import { FormProps, FormState } from './types';
+import './Form.scss';
 
 const Form = ({ onSubmit }: FormProps) => {
+  const { t, i18n } = useTranslation();
+
   const {
     register,
     handleSubmit,
@@ -25,13 +29,29 @@ const Form = ({ onSubmit }: FormProps) => {
       onSubmit={handleSubmit(handleSubmitForm)}
       data-netlify="true"
     >
-      <Input type="text" id="name" name="name" labelText="Name" register={register} required errors={errors} />
-      <Input type="email" id="email" name="email" labelText="Email" register={register} required errors={errors} />
+      <Input
+        type="text"
+        id="name"
+        name="name"
+        labelText={t('contacts.form.name')}
+        register={register}
+        required
+        errors={errors}
+      />
+      <Input
+        type="email"
+        id="email"
+        name="email"
+        labelText={t('contacts.form.email')}
+        register={register}
+        required
+        errors={errors}
+      />
       <Input
         type="textarea"
         id="message"
         name="message"
-        labelText="Message"
+        labelText={t('contacts.form.message')}
         register={register}
         required
         maxLength={2000}
@@ -40,11 +60,10 @@ const Form = ({ onSubmit }: FormProps) => {
       <Button
         type="submit"
         kind="primary"
-        styles={{ maxWidth: 90, alignSelf: 'flex-end' }}
-        className="wow fadeInRight"
+        className={`${getClassLocale(i18n, 'form-send')} wow fadeInRight`}
         animateDelay="0.9s"
       >
-        Send
+        {t('contacts.form.button_send')}
       </Button>
     </form>
   );
