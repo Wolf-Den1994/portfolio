@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { useMediaQuery } from 'react-responsive';
 import { iconLanguage } from '../../data/icons';
 import { setLocalStorage, getLocalStorage } from '../../utils';
-import { locales } from '../../utils/locale';
 import Button from '../UI/Button/Button';
 import Icon from '../UI/Icon/Icon';
+import MenuLanguage from './MenuLanguage/MenuLanguage';
 import './Language.scss';
 
 const KEY_LANGUAGE = 'KEY_LANGUAGE';
@@ -29,20 +29,11 @@ const Language = () => {
 
   if (isMobile) {
     return (
-      <ul className={`menu-language-settings ${isShowLanguageSettings ? 'menu-language-settings_show' : ''}`}>
-        {Object.keys(locales).map((locale) => (
-          <li
-            className={`menu-language-settings__item ${
-              i18n.resolvedLanguage === locale ? 'menu-language-settings__item_active' : ''
-            }`}
-            onClick={() => handleChangeLanguage(locale)}
-            role="presentation"
-            key={locale}
-          >
-            {locales[locale].title}
-          </li>
-        ))}
-      </ul>
+      <MenuLanguage
+        isShowLanguageSettings={isShowLanguageSettings}
+        onChangeLanguage={handleChangeLanguage}
+        currentLanguage={i18n.resolvedLanguage}
+      />
     );
   }
 
@@ -55,20 +46,11 @@ const Language = () => {
       <Button className="icon-language">
         <Icon name={iconLanguage} />
       </Button>
-      <ul className={`menu-language-settings ${isShowLanguageSettings ? 'menu-language-settings_show' : ''}`}>
-        {Object.keys(locales).map((locale) => (
-          <li
-            className={`menu-language-settings__item ${
-              i18n.resolvedLanguage === locale ? 'menu-language-settings__item_active' : ''
-            }`}
-            onClick={() => handleChangeLanguage(locale)}
-            role="presentation"
-            key={locale}
-          >
-            {locales[locale].title}
-          </li>
-        ))}
-      </ul>
+      <MenuLanguage
+        isShowLanguageSettings={isShowLanguageSettings}
+        onChangeLanguage={handleChangeLanguage}
+        currentLanguage={i18n.resolvedLanguage}
+      />
     </div>
   );
 };
