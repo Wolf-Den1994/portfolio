@@ -43,6 +43,12 @@ const Intro = () => {
           >
             LinkedIn
           </Button>
+          <Button
+            type="link"
+            linkOptions={{ linkUrl: 'https://github.com/Wolf-Den1994/', target: '_blank', rel: 'noreferrer' }}
+          >
+            GitHub
+          </Button>
         </div>
       </div>
     </div>

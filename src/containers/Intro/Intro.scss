@@ -95,8 +95,32 @@
       gap: 28px;
     }
 
-    @media screen and (max-width: 330px) {
+    @media screen and (max-width: 470px) {
       gap: 12px;
+    }
+
+    @media screen and (max-width: 420px) {
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    @media screen and (max-width: 350px) {
+      a {
+        max-width: 125px;
+      }
+    }
+
+    @media screen and (max-width: 320px) {
+      a {
+        max-width: 110px;
+      }
+    }
+
+    @media screen and (max-width: 290px) {
+      a {
+        max-width: 108px;
+      }
     }
   }
 

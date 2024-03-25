@@ -12,7 +12,7 @@
   "intro": {
     "spec": "developer",
     "title": "Hello, my name is Denis Karazan",
-    "description_1": "I can develop websites and web applications from scratch. ",
+    "description_1": "I develop websites and web applications from scratch. ",
     "description_2": "I have experience managing a team and working as a team. ",
     "description_3": "I'm constantly developing in the field of web development.",
     "button_cv": "Download CV"
@@ -23,7 +23,7 @@
       "company_1": "Big Data Technologies",
       "position_1": "FullStack Developer",
       "date_1": "February 2023 - Present time, Remote",
-      "more_info_1": "Working with the browser extension and frontend widgets. Creating new microservices. Developing features for monitoring products, and optimizing queries in MongoDB. I actively sought and implemented solutions to enhance system resilience. Constructed Grafana dashboards through ETL processes. Optimized builds by reducing unnecessary code and replacing images. Updating projects (libraries, Webpack, Node.js, React, manifest). Reducing costs. Gathered metrics using Prometheus. And contributed to documentation and testing",
+      "more_info_1": "Working with the browser extension and frontend widgets. Creation of new microservices. Developing features for monitoring functions and optimizing queries in MongoDB. I actively sought and implemented solutions to enhance system resilience. Constructed Grafana dashboards through ETL processes. Optimized builds by reducing unnecessary code and replacing images. Updating projects (libraries, Webpack, Node.js, React, manifest). Reducing costs. Gathered metrics using Prometheus. Contributed in writing documentation and testing",
       "company_2": "Brymonsoft",
       "position_2": "Front-end Developer",
       "date_2": "December 2021 - January 2023, Gomel",
@@ -109,7 +109,7 @@
     }
   },
   "footer": {
-    "priority": "Prior to collaboration, it's essential to acknowledge that, as a seasoned web developer, I'm unable to accommodate “urgent tasks” or engage in projects of a duration shorter than a day. My focus is on cultivating enduring partnerships rather than pursuing quick, short-term gains"
+    "priority": "Prior to collaboration, it's important to understand that as an experienced web developer, I cannot handle “urgent tasks” or participate in projects lasting less than one day. I am focused on developing strong partnerships rather than seeking quick and short-term gains"
   },
   "about": {
     "title": "About me",
