@@ -1,4 +1,4 @@
-import { useState, forwardRef, Ref } from 'react';
+import { useState, forwardRef, Ref, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import { UseFormReset } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
@@ -27,7 +27,7 @@ const Contacts = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
     dispatch(toggleShowContactModal(false));
   };
 
-  const handleSubmit = async (data: FormState, reset: UseFormReset<FormState>) => {
+  const handleSubmit = useCallback(async (data: FormState, reset: UseFormReset<FormState>) => {
     const formBody: FormPost = { 'form-name': 'contact', ...data };
 
     const preparedBody = Object.keys(formBody).reduce((acc, field, index) => {
@@ -44,7 +44,7 @@ const Contacts = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
     if (isSent) {
       reset();
     }
-  };
+  }, []);
 
   return (
     <div id="contacts" className="contacts" ref={forwardedRef}>

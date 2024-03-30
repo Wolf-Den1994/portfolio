@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { getClassLocale } from '../../utils/locale';
@@ -6,7 +7,7 @@ import Input from '../UI/Input/Input';
 import { FormProps, FormState } from './types';
 import './Form.scss';
 
-const Form = ({ onSubmit }: FormProps) => {
+const Form = memo(({ onSubmit }: FormProps) => {
   const { t, i18n } = useTranslation();
 
   const {
@@ -67,6 +68,6 @@ const Form = ({ onSubmit }: FormProps) => {
       </Button>
     </form>
   );
-};
+});
 
 export default Form;

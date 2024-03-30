@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useMediaQuery } from 'react-responsive';
 import { iconLanguage } from '../../data/icons';
@@ -15,10 +15,10 @@ const Language = () => {
   const { i18n } = useTranslation();
   const isMobile = useMediaQuery({ query: '(max-width: 840px)' });
 
-  const handleChangeLanguage = (lang: string) => {
+  const handleChangeLanguage = useCallback((lang: string) => {
     setLocalStorage(KEY_LANGUAGE, lang);
     i18n.changeLanguage(lang);
-  };
+  }, []);
 
   useEffect(() => {
     const lang = getLocalStorage(KEY_LANGUAGE);

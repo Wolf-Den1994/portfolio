@@ -1,4 +1,4 @@
-import { locales } from '../../../utils/locale';
+import ItemsLanguage from '../ItemsLanguage/ItemsLanguage';
 import './MenuLanguage.scss';
 
 type MenuLanguageProps = {
@@ -9,18 +9,7 @@ type MenuLanguageProps = {
 
 const MenuLanguage = ({ isShowLanguageSettings, currentLanguage, onChangeLanguage }: MenuLanguageProps) => (
   <ul className={`menu-language-settings ${isShowLanguageSettings ? 'menu-language-settings_show' : ''}`}>
-    {Object.keys(locales).map((locale) => (
-      <li
-        className={`menu-language-settings__item ${
-          currentLanguage === locale ? 'menu-language-settings__item_active' : ''
-        }`}
-        onClick={() => onChangeLanguage(locale)}
-        role="presentation"
-        key={locale}
-      >
-        {locales[locale].title}
-      </li>
-    ))}
+    <ItemsLanguage currentLanguage={currentLanguage} onChangeLanguage={onChangeLanguage} />
   </ul>
 );
 

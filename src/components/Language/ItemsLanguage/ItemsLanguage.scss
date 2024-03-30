@@ -1,0 +1,27 @@
+@import '../../../styles/abstracts/variables';
+
+.menu-language-settings__item {
+  cursor: pointer;
+  display: inline;
+  text-decoration: none;
+  transition: 0.3s;
+
+  &:hover {
+    color: $main-color-darken;
+    text-shadow: $text-shadow;
+  }
+
+  &_active {
+    cursor: default;
+    color: $primary;
+
+    &:hover {
+      color: $primary;
+      text-shadow: none;
+    }
+  }
+
+  @media screen and (max-width: 840px) {
+    padding: 6px 12px;
+  }
+}
