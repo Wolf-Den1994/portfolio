@@ -20,8 +20,8 @@ const Projects = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
   const textModalProject = useSelector((state: RootState) => state.layout.textModalProject);
 
   const handleScroll = () => {
-    const top = window.pageYOffset;
-    if (lastScrollTop > top && window.scrollY < WHEN_CHANGE_ROUTE_IN_PX) {
+    const top = window.scrollY;
+    if (lastScrollTop > top && window.scrollY < WHEN_CHANGE_ROUTE_IN_PX && window.location.pathname !== '/') {
       navigate('/');
     }
     lastScrollTop = top;
