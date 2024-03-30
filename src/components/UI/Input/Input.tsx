@@ -23,7 +23,16 @@ type InputProps = {
     }
 );
 
-const Input = ({ type, id, name, labelText, register, required, maxLength, errors }: InputProps) => {
+const Input = ({
+  type,
+  id = '',
+  name,
+  labelText = '',
+  register,
+  required = false,
+  maxLength = 5000,
+  errors,
+}: InputProps) => {
   const InputElement =
     type === TEXTAREA_TYPE ? (
       <textarea className="textarea" id={id} {...register(name, { required })} maxLength={maxLength} />
@@ -43,13 +52,6 @@ const Input = ({ type, id, name, labelText, register, required, maxLength, error
       {errors.name && errors.name.type === 'maxLength' && <span role="alert">Max length exceeded</span>}
     </div>
   );
-};
-
-Input.defaultProps = {
-  id: '',
-  labelText: '',
-  required: false,
-  maxLength: 5000,
 };
 
 export default Input;

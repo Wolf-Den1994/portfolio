@@ -5,14 +5,14 @@ import Icon from '../UI/Icon/Icon';
 import './ModalDefault.scss';
 
 type ModalDefaultProps = {
-  prevText?: string;
   text: string;
+  prevText?: string;
   prevTextStyle?: Record<string, unknown>;
   textStyle?: Record<string, unknown>;
   onClose: () => void;
 };
 
-const ModalDefault = ({ prevText, text, prevTextStyle, textStyle, onClose }: ModalDefaultProps) => (
+const ModalDefault = ({ text, onClose, prevText = '', prevTextStyle = {}, textStyle = {} }: ModalDefaultProps) => (
   <Modal onClose={onClose}>
     <div className="modal-default">
       <div style={textStyle}>
@@ -28,11 +28,5 @@ const ModalDefault = ({ prevText, text, prevTextStyle, textStyle, onClose }: Mod
     </div>
   </Modal>
 );
-
-ModalDefault.defaultProps = {
-  prevText: '',
-  prevTextStyle: {},
-  textStyle: {},
-};
 
 export default ModalDefault;

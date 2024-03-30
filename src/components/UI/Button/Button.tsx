@@ -18,7 +18,20 @@ type ButtonProps = {
   onClick?: () => void;
 };
 
-const Button = ({ type, children, kind, styles, linkOptions, className, animateDelay, onClick }: ButtonProps) => {
+const Button = ({
+  children,
+  type = 'button',
+  kind = 'default',
+  styles = {},
+  linkOptions = {
+    linkUrl: '',
+    target: '_self',
+    rel: '',
+  },
+  className = '',
+  animateDelay = '',
+  onClick = undefined,
+}: ButtonProps) => {
   const handleClick = () => {
     if (onClick) {
       onClick();
@@ -52,20 +65,6 @@ const Button = ({ type, children, kind, styles, linkOptions, className, animateD
       {children}
     </a>
   );
-};
-
-Button.defaultProps = {
-  type: 'button',
-  kind: 'default',
-  styles: {},
-  linkOptions: {
-    linkUrl: '',
-    target: '_self',
-    rel: '',
-  },
-  className: '',
-  animateDelay: '',
-  onClick: () => undefined,
 };
 
 export default Button;

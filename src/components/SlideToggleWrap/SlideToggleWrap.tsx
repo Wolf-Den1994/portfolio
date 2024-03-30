@@ -23,7 +23,7 @@ const SlideToggleWrap = ({
   date,
   moreInfo,
   blockAlignLeft,
-  onClick,
+  onClick = undefined,
   isMoreInfoImage = false,
 }: SlideToggleProps) => {
   const [active, setActive] = useState(false);
@@ -56,11 +56,6 @@ const SlideToggleWrap = ({
       </SlideToggle>
     </div>
   );
-};
-
-SlideToggleWrap.defaultProps = {
-  isMoreInfoImage: false,
-  onClick: () => undefined,
 };
 
 export default SlideToggleWrap;

@@ -7,7 +7,7 @@ type SlideMoreInfoProps = {
   onClick?: () => void;
 };
 
-const SlideMoreInfo = ({ content, isMoreInfoImage, description, onClick }: SlideMoreInfoProps) => {
+const SlideMoreInfo = ({ content, isMoreInfoImage, description, onClick = undefined }: SlideMoreInfoProps) => {
   const handleClick = () => {
     if (onClick) {
       onClick();
@@ -30,10 +30,6 @@ const SlideMoreInfo = ({ content, isMoreInfoImage, description, onClick }: Slide
       )}
     </>
   );
-};
-
-SlideMoreInfo.defaultProps = {
-  onClick: () => undefined,
 };
 
 export default SlideMoreInfo;

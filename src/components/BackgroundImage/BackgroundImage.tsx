@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import './BackgroundImage.scss';
 
 type BackgroundImageProps = {
@@ -8,18 +9,13 @@ type BackgroundImageProps = {
   className?: string;
 };
 
-const BackgroundImage = ({ srcImage, width, height, className, additionalStyles }: BackgroundImageProps) => (
-  <i
-    className={`background-image ${className}`}
-    style={{ backgroundImage: `url(${srcImage})`, width, height, ...additionalStyles }}
-  />
+const BackgroundImage = memo(
+  ({ srcImage, width = '', height = '', className = '', additionalStyles = {} }: BackgroundImageProps) => (
+    <i
+      className={`background-image ${className}`}
+      style={{ backgroundImage: `url(${srcImage})`, width, height, ...additionalStyles }}
+    />
+  ),
 );
-
-BackgroundImage.defaultProps = {
-  width: '',
-  height: '',
-  additionalStyles: {},
-  className: '',
-};
 
 export default BackgroundImage;

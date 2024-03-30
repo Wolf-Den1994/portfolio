@@ -71,7 +71,8 @@
             "ignorePropertyModificationsFor": ["state"]
           }],
         "no-shadow": "off",
-        "@typescript-eslint/no-shadow": ["error"]
+        "@typescript-eslint/no-shadow": ["error"],
+        "react/require-default-props": "off"
     },
     "settings": {
         "import/parsers": {
