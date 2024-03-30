@@ -7,7 +7,7 @@ import Input from '../UI/Input/Input';
 import { FormProps, FormState } from './types';
 import './Form.scss';
 
-const Form = memo(({ onSubmit }: FormProps) => {
+const Form = ({ onSubmit }: FormProps) => {
   const { t, i18n } = useTranslation();
 
   const {
@@ -68,6 +68,6 @@ const Form = memo(({ onSubmit }: FormProps) => {
       </Button>
     </form>
   );
-});
+};
 
-export default Form;
+export default memo(Form);

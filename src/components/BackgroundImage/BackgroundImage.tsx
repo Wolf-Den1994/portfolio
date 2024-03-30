@@ -9,13 +9,17 @@ type BackgroundImageProps = {
   className?: string;
 };
 
-const BackgroundImage = memo(
-  ({ srcImage, width = '', height = '', className = '', additionalStyles = {} }: BackgroundImageProps) => (
-    <i
-      className={`background-image ${className}`}
-      style={{ backgroundImage: `url(${srcImage})`, width, height, ...additionalStyles }}
-    />
-  ),
+const BackgroundImage = ({
+  srcImage,
+  width = '',
+  height = '',
+  className = '',
+  additionalStyles = {},
+}: BackgroundImageProps) => (
+  <i
+    className={`background-image ${className}`}
+    style={{ backgroundImage: `url(${srcImage})`, width, height, ...additionalStyles }}
+  />
 );
 
-export default BackgroundImage;
+export default memo(BackgroundImage);

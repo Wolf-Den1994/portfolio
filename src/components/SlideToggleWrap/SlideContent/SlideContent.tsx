@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import './SlideContent.scss';
 
 type SlideContentProps = {
@@ -14,4 +15,4 @@ const SlideContent = ({ title, description, date }: SlideContentProps) => (
   </div>
 );
 
-export default SlideContent;
+export default memo(SlideContent);

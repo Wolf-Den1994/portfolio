@@ -15,7 +15,7 @@ type ProjectProps = {
   techText: string;
 };
 
-const Project = memo(({ photoAlign, title, description, linkUrl, srcImage, techText }: ProjectProps) => {
+const Project = ({ photoAlign, title, description, linkUrl, srcImage, techText }: ProjectProps) => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
@@ -48,6 +48,6 @@ const Project = memo(({ photoAlign, title, description, linkUrl, srcImage, techT
       </div>
     </div>
   );
-});
+};
 
-export default Project;
+export default memo(Project);

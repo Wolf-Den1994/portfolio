@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import './SlideMoreInfo.scss';
 
 type SlideMoreInfoProps = {
@@ -32,4 +33,4 @@ const SlideMoreInfo = ({ content, isMoreInfoImage, description, onClick = undefi
   );
 };
 
-export default SlideMoreInfo;
+export default memo(SlideMoreInfo);

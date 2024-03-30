@@ -7,7 +7,7 @@ type ItemsLanguageProps = {
   onChangeLanguage: (locale: string) => void;
 };
 
-const ItemsLanguage = memo(({ currentLanguage, onChangeLanguage }: ItemsLanguageProps) => (
+const ItemsLanguage = ({ currentLanguage, onChangeLanguage }: ItemsLanguageProps) => (
   <>
     {Object.keys(locales).map((locale) => (
       <li
@@ -22,6 +22,6 @@ const ItemsLanguage = memo(({ currentLanguage, onChangeLanguage }: ItemsLanguage
       </li>
     ))}
   </>
-));
+);
 
-export default ItemsLanguage;
+export default memo(ItemsLanguage);

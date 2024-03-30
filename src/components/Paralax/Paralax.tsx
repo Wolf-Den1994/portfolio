@@ -7,7 +7,7 @@ type ParallaxWrapProps = {
   speed?: number;
 };
 
-const ParallaxWrap = memo(({ children, speed = 5 }: ParallaxWrapProps) => {
+const ParallaxWrap = ({ children, speed = 5 }: ParallaxWrapProps) => {
   const isDesktop = useMediaQuery({ query: '(max-width: 740px)' });
 
   return (
@@ -15,6 +15,6 @@ const ParallaxWrap = memo(({ children, speed = 5 }: ParallaxWrapProps) => {
       {children}
     </Parallax>
   );
-});
+};
 
-export default ParallaxWrap;
+export default memo(ParallaxWrap);
