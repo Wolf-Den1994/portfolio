@@ -1,3 +1,4 @@
+import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 import ParallaxWrap from '../../../components/Paralax/Paralax';
@@ -18,9 +19,7 @@ const Project = ({ photoAlign, title, description, linkUrl, srcImage, techText }
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
-  const handleClickTech = () => {
-    dispatch(toggleShowProjectModal(techText));
-  };
+  const handleClickTech = useCallback(() => dispatch(toggleShowProjectModal(techText)), []);
 
   return (
     <div className={`project ${photoAlign}`}>

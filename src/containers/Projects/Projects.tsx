@@ -1,4 +1,4 @@
-import { forwardRef, Ref, useEffect } from 'react';
+import { forwardRef, Ref, useCallback, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';
 import { useSelector, useDispatch } from 'react-redux';
@@ -27,9 +27,7 @@ const Projects = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
     lastScrollTop = top;
   };
 
-  const handleClose = () => {
-    dispatch(toggleShowProjectModal(null));
-  };
+  const handleClose = useCallback(() => dispatch(toggleShowProjectModal(null)), []);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);

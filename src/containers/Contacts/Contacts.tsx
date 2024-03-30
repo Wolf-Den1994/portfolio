@@ -23,9 +23,8 @@ const Contacts = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
   const isShowContactModal = useSelector((state: RootState) => state.layout.isShowContactModal);
   const { t } = useTranslation();
 
-  const handleClose = () => {
-    dispatch(toggleShowContactModal(false));
-  };
+  const handleClose = useCallback(() => dispatch(toggleShowContactModal(false)), []);
+  const openModal = useCallback(() => dispatch(toggleShowContactModal(true)), []);
 
   const handleSubmit = useCallback(async (data: FormState, reset: UseFormReset<FormState>) => {
     const formBody: FormPost = { 'form-name': 'contact', ...data };
@@ -39,7 +38,7 @@ const Contacts = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
 
     const isSent = await sendNetlifyForm(preparedBody);
     setIsSuccess(isSent);
-    dispatch(toggleShowContactModal(true));
+    openModal();
 
     if (isSent) {
       reset();
