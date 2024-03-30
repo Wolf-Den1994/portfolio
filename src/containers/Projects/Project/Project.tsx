@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useMemo, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 import ParallaxWrap from '../../../components/Paralax/Paralax';
@@ -15,11 +15,12 @@ type ProjectProps = {
   techText: string;
 };
 
-const Project = ({ photoAlign, title, description, linkUrl, srcImage, techText }: ProjectProps) => {
+const Project = memo(({ photoAlign, title, description, linkUrl, srcImage, techText }: ProjectProps) => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
   const handleClickTech = useCallback(() => dispatch(toggleShowProjectModal(techText)), []);
+  const imageChild = useMemo(() => <img src={srcImage} alt={title} className="project-preview__image" />, []);
 
   return (
     <div className={`project ${photoAlign}`}>
@@ -43,12 +44,10 @@ const Project = ({ photoAlign, title, description, linkUrl, srcImage, techText }
         </div>
       </div>
       <div className="project-preview">
-        <ParallaxWrap>
-          <img src={srcImage} alt={title} className="project-preview__image" />
-        </ParallaxWrap>
+        <ParallaxWrap>{imageChild}</ParallaxWrap>
       </div>
     </div>
   );
-};
+});
 
 export default Project;

@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, memo } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Parallax } from 'react-scroll-parallax';
 
@@ -7,7 +7,7 @@ type ParallaxWrapProps = {
   speed?: number;
 };
 
-const ParallaxWrap = ({ children, speed = 5 }: ParallaxWrapProps) => {
+const ParallaxWrap = memo(({ children, speed = 5 }: ParallaxWrapProps) => {
   const isDesktop = useMediaQuery({ query: '(max-width: 740px)' });
 
   return (
@@ -15,6 +15,6 @@ const ParallaxWrap = ({ children, speed = 5 }: ParallaxWrapProps) => {
       {children}
     </Parallax>
   );
-};
+});
 
 export default ParallaxWrap;
