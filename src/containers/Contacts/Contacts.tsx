@@ -13,9 +13,6 @@ import { toggleShowContactModal } from '../../slices/layoutSlice';
 import ContactsIcons from './ContactsIcons/ContactsIcons';
 import './Contacts.scss';
 
-const successText = 'Your message was successfully sent! I will reply to you shortly.';
-const failureText = 'Something went wrong. Use the contacts below to contact me.';
-
 const Contacts = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -52,7 +49,10 @@ const Contacts = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
       <ContactsIcons />
       {isShowContactModal &&
         createPortal(
-          <ModalDefault text={isSuccess ? successText : failureText} onClose={handleClose} />,
+          <ModalDefault
+            text={isSuccess ? t('contacts.success_text') : t('contacts.failure_text')}
+            onClose={handleClose}
+          />,
           document.body,
         )}
     </div>

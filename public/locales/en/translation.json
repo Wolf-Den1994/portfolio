@@ -106,7 +106,9 @@
       "email": "Email",
       "message": "Message",
       "button_send": "Send"
-    }
+    },
+    "success_text": "Your message was successfully sent! I will reply to you shortly",
+    "failure_text": "Something went wrong. Use the contacts below to contact me"
   },
   "footer": {
     "priority": "Prior to collaboration, it's important to understand that as an experienced web developer, I cannot handle “urgent tasks” or participate in projects lasting less than one day. I am focused on developing strong partnerships rather than seeking quick and short-term gains"
@@ -115,5 +117,9 @@
     "title": "About me",
     "description": "I'm an honest and responsible person. I get along well with people. I treat my work with maximum efficiency. I'm engaged in self-study. My first encounter with JavaScript was in June 2020. For me, technology is a tool",
     "alt_text_photo": "it's my"
+  },
+  "input": {
+    "required": "is required!",
+    "max_length": "Max length exceeded"
   }
 }

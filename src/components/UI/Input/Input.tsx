@@ -1,4 +1,5 @@
 import type { FieldErrors, UseFormRegister } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import { FormState } from '../../Form/types';
 import './Input.scss';
 
@@ -33,6 +34,8 @@ const Input = ({
   maxLength = 5000,
   errors,
 }: InputProps) => {
+  const { t } = useTranslation();
+
   const InputElement =
     type === TEXTAREA_TYPE ? (
       <textarea className="textarea" id={id} {...register(name, { required })} maxLength={maxLength} />
@@ -48,8 +51,10 @@ const Input = ({
         </label>
       )}
       {InputElement}
-      <strong className={`input-error ${errors[name] && 'show'}`}>{labelText} is required!</strong>
-      {errors.name && errors.name.type === 'maxLength' && <span role="alert">Max length exceeded</span>}
+      <strong className={`input-error ${errors[name] && 'show'}`}>
+        {labelText} {t('input.required')}
+      </strong>
+      {errors.name && errors.name.type === 'maxLength' && <span role="alert">{t('input.max_length')}</span>}
     </div>
   );
 };
