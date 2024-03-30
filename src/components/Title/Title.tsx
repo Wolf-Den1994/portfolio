@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import './Title.scss';
 
 type TitleProps = {
@@ -11,4 +12,4 @@ const Title = ({ text }: TitleProps) => (
   </>
 );
 
-export default Title;
+export default memo(Title);

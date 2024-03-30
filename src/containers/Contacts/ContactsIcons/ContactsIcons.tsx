@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import Button from '../../../components/UI/Button/Button';
 import Icon from '../../../components/UI/Icon/Icon';
 import contactsIconsData from '../../../data/contacts-icons';
@@ -19,4 +20,4 @@ const ContactsIcons = () => (
   </div>
 );
 
-export default ContactsIcons;
+export default memo(ContactsIcons);
