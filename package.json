@@ -3,76 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
-    "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx,json}\"",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,scss,md,json}\" --config ./.prettierrc",
     "prepare": "husky"
   },
   "dependencies": {
-    "@amcharts/amcharts5": "^5.8.4",
-    "@reduxjs/toolkit": "^2.1.0",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.79",
-    "@types/react": "^18.2.51",
-    "@types/react-dom": "^18.2.18",
-    "animate.css": "^4.1.1",
-    "i18next": "^23.10.1",
-    "i18next-http-backend": "^2.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-hook-form": "^7.50.1",
-    "react-i18next": "^14.1.0",
-    "react-redux": "^9.1.0",
-    "react-responsive": "^9.0.2",
-    "react-router-dom": "^6.22.0",
-    "react-scripts": "5.0.1",
-    "react-scroll-parallax": "^3.4.5",
-    "react-scroll-to-top": "^3.0.0",
-    "react-smooth-slide-toggle": "^1.1.1",
-    "sass": "^1.70.0",
-    "swiper": "^11.0.5",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4",
-    "wowjs": "^1.1.3"
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.2.1"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@typescript-eslint/parser": "^5.62.0",
-    "eslint": "^8.56.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.10.0",
-    "eslint-import-resolver-typescript": "^3.6.1",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^9.0.11",
-    "prettier": "^2.8.8"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.1"
   }
 }

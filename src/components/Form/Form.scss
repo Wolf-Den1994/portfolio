@@ -1,9 +1,0 @@
-@import '../../styles/abstracts/variables';
-
-.form {
-  @include dflex(stretch, center, column, 40px);
-
-  @media screen and (max-width: 740px) {
-    gap: 24px;
-  }
-}
