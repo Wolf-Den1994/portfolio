@@ -1,13 +1,11 @@
-'use client'
+'use client';
 
 import { useTranslation } from 'react-i18next';
 import Button from '../../components/UI/Button/Button';
 import './AboutMe.scss';
 
-
-
-const AboutMe = async () => {
-  const { t } = useTranslation()
+const AboutMe = () => {
+  const { t } = useTranslation();
 
   return (
     <div className="about-me">

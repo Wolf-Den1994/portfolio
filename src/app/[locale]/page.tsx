@@ -1,7 +1,3 @@
-const Home = () => (
-  <main>
-    MAIN
-  </main>
-);
+const Home = () => <main>MAIN</main>;
 
 export default Home;

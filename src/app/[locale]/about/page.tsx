@@ -1,14 +1,14 @@
-import AboutMe from '@/containers/AboutMe/AboutMe';
 import initTranslations from '@/app/i18n';
 import TranslationsProvider from '@/components/TranslationsProvider';
+import AboutMe from '@/containers/AboutMe/AboutMe';
 
 type AboutProps = {
   params: {
-    locale: string
-  }
-}
+    locale: string;
+  };
+};
 
-const i18nNamespaces = ['about', 'common']
+const i18nNamespaces = ['about', 'common'];
 
 const About = async ({ params: { locale } }: AboutProps) => {
   const { resources } = await initTranslations(locale, i18nNamespaces);
@@ -19,7 +19,7 @@ const About = async ({ params: { locale } }: AboutProps) => {
         <AboutMe />
       </main>
     </TranslationsProvider>
-  )
-}
+  );
+};
 
 export default About;

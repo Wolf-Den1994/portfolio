@@ -14,7 +14,9 @@
   font: 500 1.8rem/150% $font-family-secondary;
   color: $main-color;
 
-  transition: background-color 0.2s, border 0.2s;
+  transition:
+    background-color 0.2s,
+    border 0.2s;
   cursor: pointer;
 
   &.default {
@@ -65,7 +67,9 @@
     background-color: transparent;
     border: 0;
 
-    transition: transform 0.7s, color 0.2s;
+    transition:
+      transform 0.7s,
+      color 0.2s;
     color: $main-color;
 
     &:hover {
