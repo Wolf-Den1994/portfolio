@@ -60,7 +60,6 @@ const Button = ({
       className={`button ${kind} ${className}`}
       style={{ ...styles }}
       data-wow-delay={animateDelay}
-      onClick={handleClick}
     >
       {children}
     </a>

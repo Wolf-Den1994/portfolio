@@ -1,13 +1,18 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
+type ModalProject = {
+  text: string;
+  prevText?: string;
+};
+
 type LayoutState = {
   isShowContactModal: boolean;
-  textModalProject: string | null;
+  modalProject: ModalProject | null;
 };
 
 const initialState: LayoutState = {
   isShowContactModal: false,
-  textModalProject: null,
+  modalProject: null,
 };
 
 const layoutSlice = createSlice({
@@ -17,8 +22,8 @@ const layoutSlice = createSlice({
     toggleShowContactModal: (state, action: PayloadAction<boolean>) => {
       state.isShowContactModal = action.payload;
     },
-    toggleShowProjectModal: (state, action: PayloadAction<string | null>) => {
-      state.textModalProject = action.payload;
+    toggleShowProjectModal: (state, action: PayloadAction<ModalProject | null>) => {
+      state.modalProject = action.payload;
     },
   },
 });

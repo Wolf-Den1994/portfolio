@@ -17,7 +17,7 @@ const Projects = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const textModalProject = useSelector((state: RootState) => state.layout.textModalProject);
+  const modalProject = useSelector((state: RootState) => state.layout.modalProject);
 
   const handleScroll = () => {
     const top = window.scrollY;
@@ -39,11 +39,11 @@ const Projects = forwardRef((props, forwardedRef: Ref<HTMLDivElement>) => {
     <div id="projects" className="projects" ref={forwardedRef}>
       <Title text={t('projects.title')} />
       <SwiperProjects />
-      {textModalProject &&
+      {modalProject &&
         createPortal(
           <ModalDefault
-            prevText={t('projects.modal.prev_text')}
-            text={textModalProject}
+            prevText={modalProject.prevText}
+            text={modalProject.text}
             textStyle={{ textAlign: 'right' }}
             prevTextStyle={{
               fontWeight: 700,

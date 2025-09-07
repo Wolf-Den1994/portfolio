@@ -17,7 +17,7 @@ const AboutMe = () => {
             type="link"
             kind="primary"
             linkOptions={{
-              linkUrl: 'https://drive.google.com/file/d/1nom46ho5jgztxnxOgQB967hjWqtR5bEO/view',
+              linkUrl: 'https://drive.google.com/file/d/1Jz8uEI286FtEzFMWQa0xUdhO3p06pa3Y/view',
               target: '_blank',
               rel: 'noreferrer',
             }}

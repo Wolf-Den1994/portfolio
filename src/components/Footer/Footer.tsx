@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-priority wow fadeInUp">{t('footer.priority')}</div>
-      <div className="footer-copy wow fadeInUp">{t('logo.name')}, 2024</div>
+      <div className="footer-copy wow fadeInUp">{t('logo.name')}, 2025</div>
       <div className="footer-space" />
       <div className="footer-lava-lamp">
         <LavaLamp />

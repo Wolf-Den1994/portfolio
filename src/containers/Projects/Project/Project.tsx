@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 import ParallaxWrap from '../../../components/Paralax/Paralax';
 import Button from '../../../components/UI/Button/Button';
+import { NDA } from '../../../data/projects';
 import { toggleShowProjectModal } from '../../../slices/layoutSlice';
 import './Project.scss';
 
@@ -19,7 +20,11 @@ const Project = ({ photoAlign, title, description, linkUrl, srcImage, techText }
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
-  const handleClickTech = useCallback(() => dispatch(toggleShowProjectModal(techText)), []);
+  const handleClickTech = useCallback(
+    () => dispatch(toggleShowProjectModal({ text: techText, prevText: t('projects.modal.tech') })),
+    [],
+  );
+  const handleNDA = useCallback(() => dispatch(toggleShowProjectModal({ text: t('projects.modal.nda') })), []);
   const imageChild = useMemo(() => <img src={srcImage} alt={title} className="project-preview__image" />, []);
 
   return (
@@ -30,10 +35,11 @@ const Project = ({ photoAlign, title, description, linkUrl, srcImage, techText }
           <div className="project-info__description">{t(description)}</div>
           <div className="project-info__buttons">
             <Button
-              type="link"
+              type={linkUrl === NDA ? 'button' : 'link'}
               linkOptions={{ linkUrl, target: '_blank', rel: 'noreferrer' }}
               className="project-info__link"
               styles={{ borderRadius: 24 }}
+              onClick={handleNDA}
             >
               {t('projects.project.button_view')}
             </Button>

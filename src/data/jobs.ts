@@ -27,6 +27,13 @@ const jobsData = [
     moreInfo: 'experience.job.more_info_4',
     blockAlignLeft: false,
   },
-];
+  {
+    company: 'experience.job.company_5',
+    position: 'experience.job.position_5',
+    date: 'experience.job.date_5',
+    moreInfo: 'experience.job.more_info_5',
+    blockAlignLeft: true,
+  },
+].reverse();
 
 export default jobsData;
